@@ -7,18 +7,109 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__content">
-            <p class="header__text">TEST!</p>
-        </div>
-    </header>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <div class="header__row">
+                        <div class="header__leftside">
+                            <a href="/" class="logo header__logo">
+                                <img src="./img/logo.svg" alt="Джонни Тунец">
+                            </a>
+                            <ul class="nav-menu header__nav-menu">
+                                <li class="nav-menu__item city-select">
+                                    <svg class="location-icon">
+                                        <use xlink:href="img/icons/sprite.svg#location"></use>
+                                    </svg>
+                                    <span class="nav-menu__link">Краснодар</span>
+                                    <!-- <ul class="city-select__list">
+                                        <li class="city-select__item">Краснодар</li>
+                                        <li class="city-select__item">Волгоград</li>
+                                        <li class="city-select__item">Саратов</li>
+                                    </ul> -->
+                                </li>
+                                <li class="nav-menu__item">
+                                    <a href="#" class="nav-menu__link">Акции</a>
+                                </li>
+                                <li class="nav-menu__item">
+                                    <a href="#" class="nav-menu__link">О нас</a>
+                                </li>
+                                <li class="nav-menu__item">
+                                    <a href="#" class="nav-menu__link">Доставка</a>
+                                </li>
+                                <li class="nav-menu__item">
+                                    <a href="#" class="nav-menu__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__rightside">
+                            <div class="phone-block">
+                                <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
+                                <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__row">
+                        <div class="header__leftside">
+                            <nav class="menu-products header__menu-products">
+                                <a href="#" class="menu-products__link">Комбо наборы</a>
+                                <a href="#" class="menu-products__link">Пицца</a>
+                                <a href="#" class="menu-products__link">Роллы</a>
+                                <a href="#" class="menu-products__link">Суши</a>
+                                <a href="#" class="menu-products__link">Сеты</a>
+                                <a href="#" class="menu-products__link">Вок и закуски</a>
+                                <a href="#" class="menu-products__link">Салаты</a>
+                                <a href="#" class="menu-products__link">Десерты</a>
+                                <a href="#" class="menu-products__link">Напитки</a>
+                                <a href="#" class="menu-products__link">Дополнительно</a>
+                            </nav>
+                            <div class="search-block">
+                                <div class="search-block__control">
+                                    <input type="text" class="search-block__input">
+                                    <button class="search-block__reset">
+                                        <svg class="reset-icon">
+                                            <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="search-block__btn btn">Найти</button>
+                                </div>
+                                <svg class="search-icon">
+                                    <use xlink:href="img/icons/sprite.svg#search"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="header__rightside">
+                            <div class="cart-block personal-block">
+                                <div class="personal-block__visual">
+                                    <svg class="cart-icon">
+                                        <use xlink:href="img/icons/sprite.svg#cart"></use>
+                                    </svg>
+                                    <div class="cart-block__summ">3</div>
+                                </div>
+                                <div class="personal-block__text">1 089₽</div>
+                            </div>
+                            <div class="personal-block profile-block">
+                                <div class="personal-block__visual">
+                                    <svg class="personal-icon">
+                                        <use xlink:href="img/icons/sprite.svg#personal"></use>
+                                    </svg>
+                                </div>
+                                <div class="personal-block__text">
+                                    174
+                                    <img src="./img/icons/light.svg" alt="points">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
 
-    <main>
-        <div class="container">
-            <img src="img/img1.jpg" alt="zara">
-        </div>
-
-        <div class="image"></div>
-    </main>
+        </main>
+        <footer class="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
 </body>
 </html>

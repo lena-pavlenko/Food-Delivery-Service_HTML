@@ -1,0 +1,45 @@
+.header{
+    flex-shrink: 1;
+    padding: 24px 0 18px;
+
+    &__logo{
+        padding-right: 19px;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__leftside{
+        display: flex;
+        align-items: center;
+    }
+
+    &__rightside{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__nav-menu{
+        padding-left: 24px;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            width: 2px;
+            height: 34.5px;
+            background: rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &__menu-products{
+        padding-right: 26px;
+    }
+}

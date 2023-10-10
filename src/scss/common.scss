@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+.footer{
+    flex-shrink: 1;
+}
+
+.container{
+    max-width: 1512px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.location-icon{
+    width: 16px;
+    height: 20px;
+    fill: none;
+}
+
+.search-icon{
+    width: 22px;
+    height: 22px;
+    fill: none;
+}
+
+.cart-icon{
+    width: 24px;
+    height: 26px;
+    fill: none;
+}
+
+.personal-icon{
+    width: 23px;
+    height: 27px;
+    fill: none;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+
+    &__item{
+        list-style: none;
+        color: $textLight;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.city-select{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.phone-block{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__number{
+        color: inherit;
+        text-decoration: none;
+        line-height: 0.7;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__text{
+        color: $textLight;
+    }
+}
+
+.search-block{
+
+    &__control{
+        display: none;
+    }
+}
+
+.menu-products{
+
+    display: flex;
+    gap: 36px;
+
+    &__link{
+        color: inherit;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.1;
+    }
+}
+
+.personal-block{
+    padding: 9px 15.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    &__visual{
+        position: relative;
+    }
+
+    &__text{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.cart-block{
+
+    &__summ {
+        position: absolute;
+        background: $redAccent;
+        border-radius: 22px;
+        outline: 1px solid #fff;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.2;
+        padding: 2px 9px;
+        top: -1px;
+        right: -20px;
+    }
+}
