@@ -1,0 +1,58 @@
+.banner {
+    padding: 16px 0 25px;
+
+    &-slider {
+        position: relative;
+
+        &__swiper-slide {
+            aspect-ratio: 1480/400;
+    
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    
+        .swiper-button-next {
+            right: -30px;
+    
+            &::after {
+                display: none;
+            }
+    
+            svg {
+                height: 20px;
+            }
+        }
+    
+        .swiper-button-prev {
+            left: -30px;
+    
+            &::after {
+                display: none;
+            }
+    
+            svg {
+                height: 20px;
+                transform: rotate(-180deg);
+            }
+        }
+    
+        .swiper-pagination {
+            bottom: -20px;
+    
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                margin: 0 5px;
+                opacity: 0.15;
+            }
+    
+            .swiper-pagination-bullet-active {
+                background-color: $accentColor;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.header{
+    flex-shrink: 1;
+    padding: 24px 0 8px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+
+    &__logo{
+        padding-right: 19px;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__leftside{
+        display: flex;
+        align-items: center;
+        
+        &_border-r {
+            padding-right: 24px;
+            border-right: 2px solid rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &__rightside{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__nav-menu{
+        padding-left: 24px;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            width: 2px;
+            height: 34.5px;
+            background: rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &__menu-products{
+        padding-right: 26px;
+    }
+}
