@@ -1,0 +1,108 @@
+.products {
+    padding: 35px 0;
+
+    .product-filter {
+        margin-bottom: 24px;
+    }
+
+    &__title_h2 {
+        margin-bottom: 32px;
+    }
+}
+
+.product-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        padding: 12px 24px;
+        border-radius: 100px;
+        color: #999999;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 0.8;
+        text-align: center;
+        cursor: pointer;
+        transition: ease .3s;
+
+        &:hover {
+            color: $textDark;
+        }
+
+        &_current {
+            background-color: #F5F5F5;
+            color: $textDark;
+        }
+    }
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.product-card {
+    padding: 12px 12px 25px;
+
+    &__top {
+        border-radius: 12px;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1/1;
+        margin-bottom: 12px;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 27px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__title {
+        flex-grow: 1;
+    }
+
+    &__text {
+        margin: 0;
+        color: #999999;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__price {
+        color: $textDark;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.44;
+    }
+}

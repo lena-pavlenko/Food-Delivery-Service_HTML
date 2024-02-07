@@ -58,6 +58,12 @@ body {
     fill: none;
 }
 
+.shevron-icon {
+    stroke: $accentColor;
+    width: 18px;
+    height: 9px;
+}
+
 .nav-menu{
     display: flex;
     align-items: center;
@@ -155,5 +161,27 @@ body {
         padding: 2px 9px;
         top: -1px;
         right: -20px;
+    }
+}
+
+.title {
+    color: $textDark;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin: 0;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &_h2 {
+        font-size: 32px;
+        line-height: 0.5;
+    }
+
+    &_h3 {
+        font-size: 18px;
+        line-height: 1.4;
     }
 }

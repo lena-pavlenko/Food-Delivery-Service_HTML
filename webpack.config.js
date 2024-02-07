@@ -68,7 +68,7 @@ module.exports = {
                         sourceMap: true,
                       },
                     },
-                  ],
+                ],
             },
             // fonts
             {
