@@ -44,18 +44,21 @@ body {
     width: 22px;
     height: 22px;
     fill: none;
+    stroke: $textLight;
 }
 
 .cart-icon{
     width: 24px;
     height: 26px;
     fill: none;
+    stroke: $textDark;
 }
 
 .personal-icon{
     width: 23px;
     height: 27px;
     fill: none;
+    stroke: $textDark;
 }
 
 .shevron-icon {
@@ -79,6 +82,11 @@ body {
     &__link{
         text-decoration: none;
         color: inherit;
+        transition: ease .3s;
+
+        &:hover {
+            color: $textDark;
+        }
     }
 }
 
@@ -86,6 +94,32 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    &__visible {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    &__field {
+        color: $textLight;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        transition: ease .3s;
+
+        &:hover {
+            color: $textDark;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        transform: rotate(90deg);
+    }
 }
 
 .phone-block{
@@ -99,6 +133,11 @@ body {
         line-height: 0.7;
         font-size: 24px;
         font-weight: 600;
+        transition: ease .3s;
+
+        &:hover {
+            color: $accentColor;
+        }
     }
 
     &__text{
@@ -111,10 +150,24 @@ body {
     &__control{
         display: none;
     }
+
+    .search-icon {
+        transition: ease .3s;
+
+        &:hover {
+            stroke: $accentColor;
+        }
+    }
+
+    &__btn {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
 }
 
 .menu-products{
-
     display: flex;
     gap: 36px;
 
@@ -124,6 +177,12 @@ body {
         font-size: 18px;
         font-weight: 600;
         line-height: 1.1;
+        transition: ease .3s;
+
+        &:hover {
+            text-decoration: underline;
+            color: $redAccent;
+        }
     }
 }
 
@@ -133,6 +192,20 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 7px;
+    cursor: pointer;
+    transition: ease .3s;
+
+    &:hover {
+        color: $redAccent;
+
+        .cart-icon {
+            stroke: $redAccent;
+        }
+
+        .personal-icon {
+            stroke: $redAccent;
+        }
+    }
 
     &__visual{
         position: relative;
@@ -144,6 +217,11 @@ body {
         line-height: 1.1;
         display: flex;
         align-items: center;
+
+        &_default {
+            display: none;
+            color: $textLight;
+        }
     }
 }
 
@@ -183,5 +261,137 @@ body {
     &_h3 {
         font-size: 18px;
         line-height: 1.4;
+    }
+}
+
+.button {
+    cursor: pointer;
+    border: 1px solid $accentColor;
+    border-radius: 100px;
+    background-color: $accentColor;
+    padding: 13px;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 0.85;
+    text-align: center;
+    height: 40px;
+    transition: ease .3s;
+
+    &:hover {
+        box-shadow: 0px 4px 33px 0px rgba(255, 114, 85, 0.25);
+        background-color: $redAccent;
+        border: 1px solid $redAccent;
+    }
+}
+
+.count-button {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 100px;
+    background: rgb(245, 245, 245);
+    overflow: hidden;
+    color: $textDark;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0.5;
+    text-align: center;
+    padding: 0 13.5px;
+
+    &__action {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        font-size: 24px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: ease .3s;
+
+        &:hover {
+            color: $redAccent;
+        }
+    }
+
+    &__field {
+        padding: 0;
+        font-weight: 600;
+        font-size: 14px;
+        outline: none;
+        width: 100%;
+        max-width: 55px;
+        margin: 0;
+        border: none;
+        height: 19px;
+        background: transparent;
+        text-align: center;
+    }
+}
+
+.social-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    &__text {
+        color: $textLight;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    &__info {
+        color: $textDark;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 0.66;
+        text-decoration: none;
+    }
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.logo {
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-small {
+        width: 63px;
+        height: 54px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.app-item {
+    display: block;
+    width: 140px;
+    height: 40px;
+
+    img {
+        width: 100%;
+        height: 100%;
     }
 }

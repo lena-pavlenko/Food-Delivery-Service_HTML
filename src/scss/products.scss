@@ -43,11 +43,13 @@
 .products-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    gap: 28px 12px;
 }
 
 .product-card {
     padding: 12px 12px 25px;
+    border-radius: 12px;
+    transition: ease .3s;
 
     &__top {
         border-radius: 12px;
@@ -101,8 +103,35 @@
 
     &__price {
         color: $textDark;
+    }
+
+    &__right {
         font-size: 20px;
-        font-weight: 600;
         line-height: 1.44;
+        color: $textLight;
+        font-weight: 600;
+
+        span {
+            &:nth-child(2) {
+                color: rgb(153, 153, 153);
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__quant {
+        font-size: 14px;
+    }
+
+    &__button {
+        width: 110px;
+    }
+
+    &__count-button {
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 4px 33px 0px rgba(0, 0, 0, 0.05);
     }
 }

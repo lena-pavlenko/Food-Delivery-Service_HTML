@@ -3,8 +3,32 @@
     padding: 24px 0 8px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 
+    &-scroll {
+        background: rgba(255, 255, 255, 0.85);
+        position: fixed;
+        top: 0;
+        z-index: 30;
+        padding: 0 0 0 9px;
+    }
+
     &__logo{
         padding-right: 19px;
+        position: relative;
+        margin-right: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2px;
+            height: 34.5px;
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        &-small {
+            display: none;
+        }
     }
 
     &__row{
@@ -31,18 +55,8 @@
     }
 
     &__nav-menu{
-        padding-left: 24px;
+        padding-left: 25px;
         position: relative;
-
-        &::after{
-            content: '';
-            position: absolute;
-            left: 0;
-            top: -10px;
-            width: 2px;
-            height: 34.5px;
-            background: rgba(0, 0, 0, 0.15);
-        }
     }
 
     &__menu-products{
