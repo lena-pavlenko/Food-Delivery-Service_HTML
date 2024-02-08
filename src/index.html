@@ -16,18 +16,28 @@
                             <a href="/" class="logo header__logo">
                                 <img src="./img/logo.svg" alt="Джонни Тунец">
                             </a>
-                            <ul class="nav-menu header__nav-menu">
-                                <li class="nav-menu__item city-select">
+                            <div class="city-select">
+                                <div class="city-select__visible">
                                     <svg class="location-icon">
                                         <use xlink:href="img/icons/sprite.svg#location"></use>
                                     </svg>
-                                    <span class="nav-menu__link">Краснодар</span>
-                                    <!-- <ul class="city-select__list">
-                                        <li class="city-select__item">Краснодар</li>
-                                        <li class="city-select__item">Волгоград</li>
-                                        <li class="city-select__item">Саратов</li>
-                                    </ul> -->
-                                </li>
+                                    <div class="city-select__field">
+                                        <input type="hidden" value="Краснодар" name="city">
+                                        <span class="city-select__text">Краснодар</span>
+                                    </div>
+                                    <button class="city-select__btn">
+                                        <svg class="shevron-icon">
+                                            <use xlink:href="img/icons/sprite.svg#shevron"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- <ul class="city-select__list">
+                                    <li class="city-select__item">Краснодар</li>
+                                    <li class="city-select__item">Волгоград</li>
+                                    <li class="city-select__item">Саратов</li>
+                                </ul> -->
+                            </div>
+                            <ul class="nav-menu header__nav-menu">
                                 <li class="nav-menu__item">
                                     <a href="#" class="nav-menu__link">Акции</a>
                                 </li>
@@ -50,6 +60,7 @@
                         </div>
                     </div>
                     <div class="header__row">
+                        <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" alt="Джонни Тунец"></div>
                         <div class="header__leftside header__leftside_border-r">
                             <nav class="menu-products header__menu-products">
                                 <a href="#" class="menu-products__link">Комбо наборы</a>
@@ -73,9 +84,11 @@
                                     </button>
                                     <button class="search-block__btn btn">Найти</button>
                                 </div>
-                                <svg class="search-icon">
-                                    <use xlink:href="img/icons/sprite.svg#search"></use>
-                                </svg>
+                                <button class="search-block__btn">
+                                    <svg class="search-icon">
+                                        <use xlink:href="img/icons/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="header__rightside">
@@ -86,6 +99,7 @@
                                     </svg>
                                     <div class="cart-block__summ">3</div>
                                 </div>
+                                <span class="personal-block__text personal-block__text_default">Корзина</span>
                                 <div class="personal-block__text">1 089₽</div>
                             </div>
                             <div class="personal-block profile-block">
@@ -94,6 +108,7 @@
                                         <use xlink:href="img/icons/sprite.svg#personal"></use>
                                     </svg>
                                 </div>
+                                <span class="personal-block__text personal-block__text_default">Войти</span>
                                 <div class="personal-block__text">
                                     174
                                     <img src="./img/icons/light.svg" alt="points">
@@ -230,6 +245,494 @@
                                     <span class="product-card__quant">240&nbsp;г</span>
                                 </div>
                                 <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll2.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll3.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll4.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll5.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll1.png" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll2.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll3.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll4.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/roll5.jpeg" alt="roll">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Банзай</a>
+                                </h3>
+                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">379&nbsp;₽</span>
+                                    <span>/</span> 
+                                    <span class="product-card__quant">240&nbsp;г</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="products" id="pizza">
+                <div class="container">
+                    <h2 class="title title_h2 products__title_h2">
+                        <a href="#">Пицца</a>
+                    </h2>
+                    <div class="products-grid">
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza2.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza3.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza2.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza3.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza2.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza3.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__top">
+                                <a href="#">
+                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
+                                </a>
+                            </div>
+                            <div class="product-card__desc">
+                                <h3 class="title title_h3 product-card__title">
+                                    <a href="#">Пепперони Фреш</a>
+                                </h3>
+                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+                            </div>
+                            <div class="product-card__bottom">
+                                <div class="product-card__right">
+                                    <span class="product-card__price">от 379&nbsp;₽</span>
+                                </div>
+                                <button class="button product-card__button">Выбрать</button>
+                                <div class="count-button product-card__count-button">
+                                    <button class="count-button__action" data-countbtn="minus">-</button>
+                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                                    <button class="count-button__action" data-countbtn="plus">+</button>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -237,7 +740,50 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="container"></div>
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__content">
+                        <div class="footer__menu">
+                            <span class="footer__menu-title">Навигация</span>
+                            <ul class="nav-menu footer__nav-menu">
+                                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Акции</a></li>
+                                <li class="nav-menu__item"><a href="#" class="nav-menu__link">О нас</a></li>
+                                <li class="nav-menu__item"><a href="" class="nav-menu__link">Доставка</a></li>
+                                <li class="nav-menu__item"><a href="" class="nav-menu__link">Контакты</a></li>
+                                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Правовая информация</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__social">
+                            <div class="social-block footer__social-block">
+                                <span class="social-block__text">Заказывайте по телефону</span>
+                                <a href="tel:89990009999" class="social-block__info">+7 (999) 999-99-99</a>
+                            </div>
+                            <div class="social-block footer__social-block">
+                                <span class="social-block__text">Доставка работает</span>
+                                <span class="social-block__info">с 10:30 до 23:30</span>
+                            </div>
+                            <a href="#" class="social-link"><img src="/src/img/icons/vk.svg" alt="vk"></a>
+                        </div>
+                        <div class="footer__info">
+                            <a href="/" class="logo footer__logo">
+                                <img src="/src/img/logo.svg" alt="Джонни Тунец">
+                            </a>
+                            <p class="footer__info-text">Любимые блюда в приложении! Скачай сейчас!</p>
+                            <div class="footer__apps">
+                                <a href="#" class="app-item"><img src="/src/img/googleplay.png" alt="googleplay"></a>
+                                <a href="#" class="app-item"><img src="/src/img/appstore.png" alt="appstore"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <p class="footer__rights">
+                        2023 © «Джонни Тунец» - Новая волна вкуса
+                    </p>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
