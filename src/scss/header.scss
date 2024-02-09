@@ -3,12 +3,25 @@
     padding: 24px 0 8px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 
+    &.isScroll {
+        border-bottom: 2px solid transparent;
+
+        .menu-products {
+            gap: 26px;
+        }
+
+        .logo-small {
+            display: block;
+        }
+    }
+
     &-scroll {
         background: rgba(255, 255, 255, 0.85);
         position: fixed;
         top: 0;
         z-index: 30;
         padding: 0 0 0 9px;
+        width: 1480px;
     }
 
     &__logo{
