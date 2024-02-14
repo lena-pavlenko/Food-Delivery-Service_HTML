@@ -3,6 +3,7 @@
 }
 html {
     height: 100%;
+    font-size: 3px;
 }
 body {
     margin: 0;
@@ -70,6 +71,11 @@ body {
 .reset-icon {
     width: 12px;
     height: 13px;
+}
+
+.burger-icon {
+    width: 13.5px;
+    height: 11.5px;
 }
 
 .title {
@@ -182,14 +188,14 @@ body {
 
     &__text {
         color: $textLight;
-        font-size: 16px;
+        font-size: clamp(5.333rem, 1vw + 1.75rem, 8rem);
         font-weight: 500;
         line-height: 1;
     }
 
     &__info {
         color: $textDark;
-        font-size: 24px;
+        font-size: clamp(5.333rem, 1vw + 1.75rem, 8rem);
         font-weight: 600;
         line-height: 0.66;
         text-decoration: none;
@@ -209,6 +215,8 @@ body {
 }
 
 .logo {
+    max-width: 442px;
+
     img {
         width: 100%;
         height: 100%;
@@ -252,6 +260,7 @@ body {
         text-decoration: none;
         color: inherit;
         transition: ease .3s;
+        font-size: clamp(4rem, 1vw + 1rem, 5.333rem);
 
         &:hover {
             color: $textDark;
@@ -273,7 +282,7 @@ body {
 
     &__field {
         color: $textLight;
-        font-size: 16px;
+        font-size: clamp(4rem, 1vw + 1rem, 5.333rem);
         font-weight: 500;
         line-height: 1;
         transition: ease .3s;
@@ -300,7 +309,7 @@ body {
         color: inherit;
         text-decoration: none;
         line-height: 0.7;
-        font-size: 24px;
+        font-size: clamp(5.333rem, 1vw + 1.75rem, 8rem);
         font-weight: 600;
         transition: ease .3s;
 
@@ -311,6 +320,7 @@ body {
 
     &__text{
         color: $textLight;
+        font-size: clamp(4rem, 1vw + 1rem, 5.333rem);
     }
 }
 
@@ -328,7 +338,7 @@ body {
         overflow: hidden;
         position: absolute;
         padding: 3px;
-        right: 40px;
+        right: 23px;
         top: 50%;
         translate: 0 -50%;
         transition: cubic-bezier(0.25, 0.1, 1, 0.96) .3s;
@@ -379,16 +389,22 @@ body {
 
 .menu-products{
     display: flex;
-    gap: 36px;
+    flex-grow: 1;
+    // gap: 36px;
+    gap: clamp(5.333rem, 2vw + 1rem, 12rem);
 
     &__link{
         color: inherit;
         text-decoration: none;
-        font-size: 18px;
+        font-size: clamp(4.667rem, 1vw + 1rem, 6rem);
         font-weight: 600;
         line-height: 1.1;
         transition: ease .3s;
         display: block;
+
+        // @media(max-width: 1560px) {
+        //     font-size: 16px;
+        // }
 
         &:hover {
             text-decoration: underline;
@@ -405,6 +421,10 @@ body {
     gap: 7px;
     transition: ease .3s;
     position: relative;
+
+    @media(max-width: 1450px) {
+        padding: 9px;
+    }
 
     &:hover {
         .personal-block__text {
@@ -615,5 +635,51 @@ body {
         border: none;
         padding: 8px;
         cursor: pointer;
+    }
+}
+
+.menu-trigger {
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.hide-menu {
+    @media(max-width: 1350px) {
+        padding: 20px 0;
+    }
+
+    &__menu-trigger {
+        @media(max-width: 1350px) {
+            display: block;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @media(max-width: 1350px) {
+            display: none;
+        }
+    }
+}
+
+.transformer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+
+    &__menu-trigger {
+       @media(max-width: $tabletBreakPoint) {
+        display: block;
+       }
+    }
+
+    @media(max-width: $tabletBreakPoint) {
+        display: none;
     }
 }

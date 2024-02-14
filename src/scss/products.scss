@@ -29,6 +29,10 @@
         cursor: pointer;
         transition: ease .3s;
 
+        @media(max-width: $tabletBreakPoint) {
+            padding: 12px;
+        }
+
         &:hover {
             color: $textDark;
         }
@@ -42,7 +46,7 @@
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
     gap: 28px 12px;
 }
 
