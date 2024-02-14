@@ -3,6 +3,11 @@
 
     &-slider {
         position: relative;
+        margin: 0 auto;
+
+        @media(max-width: 1560px) {
+            width: calc(100% - 54px);
+        }
 
         &__swiper-slide {
             aspect-ratio: 1480/400;

@@ -24,15 +24,33 @@ window.onload = function() {
     });
   }
 
+  // Открытие/закрытие поиска
+  const searchHandler = (searchContainer) => {
+    let menuWidth = document.querySelector('.menu-products').clientWidth
+    console.dir(document.querySelector('.menu-products'));
+    if (searchContainer) {
+      const searchTrigger = searchContainer.querySelector('.search-block__btn')
+      const searchControl = searchContainer.querySelector('.search-block__control')
+    
+      searchTrigger.addEventListener('click', e => {
+        searchControl.classList.toggle('open')
+        searchControl.style.width = `${menuWidth}px`
+        if (searchControl.classList.contains('open')) {
+          menuWidth = 0
+        } else {
+          menuWidth = document.querySelector('.menu-products').clientWidth
+        }
+      })
+    }
+  }
+
   // События при скролле
   window.addEventListener('scroll', e => {
     const headerPaddingTop = parseInt(window.getComputedStyle(header).paddingTop)
     const topHeaderHeight = header.querySelectorAll('.header__row')[0].clientHeight
     
-    let menuWidth = document.querySelector('.menu-products').clientWidth
-    
     // Фикс шапки
-    if (window.scrollY > topHeaderHeight + headerPaddingTop) {
+    if (screen.width > 1100 && window.scrollY > topHeaderHeight + headerPaddingTop) {
       scrollHeader.classList.add('header-scroll')
       document.body.style.paddingTop = `${topHeaderHeight + headerPaddingTop}px`
     } else {
@@ -46,24 +64,12 @@ window.onload = function() {
       header.classList.remove('isScroll')
     }
 
-    // Открытие/закрытие поиска
-    if (searchBlock) {
-      const searchTrigger = searchBlock.querySelector('.search-block__btn')
-      const searchControl = searchBlock.querySelector('.search-block__control')
-    
-      searchTrigger.addEventListener('click', e => {
-        searchControl.classList.toggle('open')
-        searchControl.style.width = `${menuWidth}px`
-        if (searchControl.classList.contains('open')) {
-          menuWidth = 0
-        } else {
-          menuWidth = document.querySelector('.menu-products').clientWidth
-        }
-      })
-    }
+    searchHandler(searchBlock)
   })
-  
+
+  searchHandler(searchBlock)
 }
+
 
 
 

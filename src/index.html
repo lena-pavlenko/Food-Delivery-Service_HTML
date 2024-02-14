@@ -12,52 +12,62 @@
             <div class="container">
                 <div class="header__content">
                     <div class="header__row">
-                        <div class="header__leftside">
-                            <a href="/" class="logo header__logo">
-                                <img src="./img/logo.svg" alt="Джонни Тунец">
-                            </a>
-                            <div class="city-select">
-                                <div class="city-select__visible">
-                                    <svg class="location-icon">
-                                        <use xlink:href="img/icons/sprite.svg#location"></use>
-                                    </svg>
-                                    <div class="city-select__field">
-                                        <input type="hidden" value="Краснодар" name="city">
-                                        <span class="city-select__text">Краснодар</span>
-                                    </div>
-                                    <button class="city-select__btn">
-                                        <svg class="shevron-icon">
-                                            <use xlink:href="img/icons/sprite.svg#shevron"></use>
+                        <a href="/" class="logo header__logo header__logo_mob">
+                            <img src="./img/logo.svg" alt="Джонни Тунец">
+                        </a>
+                        <div class="transformer-menu">
+                            <div class="header__leftside">
+                                <a href="/" class="logo header__logo">
+                                    <img src="./img/logo.svg" alt="Джонни Тунец">
+                                </a>
+                                <div class="city-select">
+                                    <div class="city-select__visible">
+                                        <svg class="location-icon">
+                                            <use xlink:href="img/icons/sprite.svg#location"></use>
                                         </svg>
-                                    </button>
+                                        <div class="city-select__field">
+                                            <input type="hidden" value="Краснодар" name="city">
+                                            <span class="city-select__text">Краснодар</span>
+                                        </div>
+                                        <button class="city-select__btn">
+                                            <svg class="shevron-icon">
+                                                <use xlink:href="img/icons/sprite.svg#shevron"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- <ul class="city-select__list">
+                                        <li class="city-select__item">Краснодар</li>
+                                        <li class="city-select__item">Волгоград</li>
+                                        <li class="city-select__item">Саратов</li>
+                                    </ul> -->
                                 </div>
-                                <!-- <ul class="city-select__list">
-                                    <li class="city-select__item">Краснодар</li>
-                                    <li class="city-select__item">Волгоград</li>
-                                    <li class="city-select__item">Саратов</li>
-                                </ul> -->
+                                <ul class="nav-menu header__nav-menu">
+                                    <li class="nav-menu__item">
+                                        <a href="#" class="nav-menu__link">Акции</a>
+                                    </li>
+                                    <li class="nav-menu__item">
+                                        <a href="#" class="nav-menu__link">О нас</a>
+                                    </li>
+                                    <li class="nav-menu__item">
+                                        <a href="#" class="nav-menu__link">Доставка</a>
+                                    </li>
+                                    <li class="nav-menu__item">
+                                        <a href="#" class="nav-menu__link">Контакты</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="nav-menu header__nav-menu">
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Акции</a>
-                                </li>
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">О нас</a>
-                                </li>
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Доставка</a>
-                                </li>
-                                <li class="nav-menu__item">
-                                    <a href="#" class="nav-menu__link">Контакты</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="header__rightside">
-                            <div class="phone-block">
-                                <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
-                                <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
+                            <div class="header__rightside">
+                                <div class="phone-block">
+                                    <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
+                                    <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
+                                </div>
                             </div>
                         </div>
+                        <button class="menu-trigger transformer-menu__menu-trigger">
+                            <svg class="burger-icon">
+                                <use xlink:href="img/icons/sprite.svg#burger"></use>
+                            </svg>
+                        </button>
                     </div>
                     <div class="header__row">
                         <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" alt="Джонни Тунец"></div>
@@ -92,149 +102,159 @@
                             </div>
                         </div>
                         <div class="header__rightside">
-                            <div class="cart-block personal-block">
-                                <div class="personal-block__visual">
-                                    <svg class="cart-icon">
-                                        <use xlink:href="img/icons/sprite.svg#cart"></use>
+                            <div class="hide-menu">
+                                <button class="menu-trigger hide-menu__menu-trigger">
+                                    <svg class="burger-icon">
+                                        <use xlink:href="img/icons/sprite.svg#burger"></use>
                                     </svg>
-                                    <div class="cart-block__summ">3</div>
-                                </div>
-                                <span class="personal-block__text personal-block__text_default">Корзина</span>
-                                <div class="personal-block__text">1 089₽</div>
-                                <a href="#" class="personal-block__link"></a>
-                                <div class="cart-popup">
-                                    <div class="cart-popup__content">
-                                        <div class="cart-popup__top">
-                                            <ul class="cart-popup__list">
-                                                <li class="cart-item">
-                                                    <div class="cart-item__left">
-                                                        <div class="cart-item__pic">
-                                                            <img src="/src/img/roll1.png" alt="roll">
-                                                        </div>
-                                                        <div class="cart-item__number">x 1</div>
-                                                        <div class="cart-item__name">Банзай</div>
-                                                    </div>
-                                                    <div class="cart-item__right">
-                                                        <div class="cart-item__price">379&nbsp;₽</div>
-                                                        <button class="cart-item__reset">
-                                                            <svg class="reset-icon">
-                                                                <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                                <li class="cart-item">
-                                                    <div class="cart-item__left">
-                                                        <div class="cart-item__pic">
-                                                            <img src="/src/img/roll1.png" alt="roll">
-                                                        </div>
-                                                        <div class="cart-item__number">x 1</div>
-                                                        <div class="cart-item__name">Банзай</div>
-                                                    </div>
-                                                    <div class="cart-item__right">
-                                                        <div class="cart-item__price">379&nbsp;₽</div>
-                                                        <button class="cart-item__reset">
-                                                            <svg class="reset-icon">
-                                                                <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                                <li class="cart-item">
-                                                    <div class="cart-item__left">
-                                                        <div class="cart-item__pic">
-                                                            <img src="/src/img/roll1.png" alt="roll">
-                                                        </div>
-                                                        <div class="cart-item__number">x 1</div>
-                                                        <div class="cart-item__name">Банзай</div>
-                                                    </div>
-                                                    <div class="cart-item__right">
-                                                        <div class="cart-item__price">379&nbsp;₽</div>
-                                                        <button class="cart-item__reset">
-                                                            <svg class="reset-icon">
-                                                                <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                                <li class="cart-item">
-                                                    <div class="cart-item__left">
-                                                        <div class="cart-item__pic">
-                                                            <img src="/src/img/roll1.png" alt="roll">
-                                                        </div>
-                                                        <div class="cart-item__number">x 1</div>
-                                                        <div class="cart-item__name">Банзай</div>
-                                                    </div>
-                                                    <div class="cart-item__right">
-                                                        <div class="cart-item__price">379&nbsp;₽</div>
-                                                        <button class="cart-item__reset">
-                                                            <svg class="reset-icon">
-                                                                <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                                <li class="cart-item">
-                                                    <div class="cart-item__left">
-                                                        <div class="cart-item__pic">
-                                                            <img src="/src/img/roll1.png" alt="roll">
-                                                        </div>
-                                                        <div class="cart-item__number">x 1</div>
-                                                        <div class="cart-item__name">Банзай</div>
-                                                    </div>
-                                                    <div class="cart-item__right">
-                                                        <div class="cart-item__price">379&nbsp;₽</div>
-                                                        <button class="cart-item__reset">
-                                                            <svg class="reset-icon">
-                                                                <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                                <li class="cart-item">
-                                                    <div class="cart-item__left">
-                                                        <div class="cart-item__pic">
-                                                            <img src="/src/img/roll1.png" alt="roll">
-                                                        </div>
-                                                        <div class="cart-item__number">x 1</div>
-                                                        <div class="cart-item__name">Банзай</div>
-                                                    </div>
-                                                    <div class="cart-item__right">
-                                                        <div class="cart-item__price">379&nbsp;₽</div>
-                                                        <button class="cart-item__reset">
-                                                            <svg class="reset-icon">
-                                                                <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                </button>
+                                <div class="hide-menu__content">
+                                    <div class="cart-block personal-block">
+                                        <div class="personal-block__visual">
+                                            <svg class="cart-icon">
+                                                <use xlink:href="img/icons/sprite.svg#cart"></use>
+                                            </svg>
+                                            <div class="cart-block__summ">3</div>
                                         </div>
-                                        <div class="cart-popup__bottom">
-                                            <div class="cart-popup__bottom-inner">
-                                                <div class="cart-popup__left">4 позиции</div>
-                                                <div class="cart-popup__right">
-                                                    <div class="cart-popup__sum">1,379&nbsp;₽</div>
-                                                    <button class="button button_border cart-popup__button">В корзину</button>
+                                        <span class="personal-block__text personal-block__text_default">Корзина</span>
+                                        <div class="personal-block__text">1 089₽</div>
+                                        <a href="#" class="personal-block__link"></a>
+                                        <div class="cart-popup">
+                                            <div class="cart-popup__content">
+                                                <div class="cart-popup__top">
+                                                    <ul class="cart-popup__list">
+                                                        <li class="cart-item">
+                                                            <div class="cart-item__left">
+                                                                <div class="cart-item__pic">
+                                                                    <img src="/src/img/roll1.png" alt="roll">
+                                                                </div>
+                                                                <div class="cart-item__number">x 1</div>
+                                                                <div class="cart-item__name">Банзай</div>
+                                                            </div>
+                                                            <div class="cart-item__right">
+                                                                <div class="cart-item__price">379&nbsp;₽</div>
+                                                                <button class="cart-item__reset">
+                                                                    <svg class="reset-icon">
+                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cart-item">
+                                                            <div class="cart-item__left">
+                                                                <div class="cart-item__pic">
+                                                                    <img src="/src/img/roll1.png" alt="roll">
+                                                                </div>
+                                                                <div class="cart-item__number">x 1</div>
+                                                                <div class="cart-item__name">Банзай</div>
+                                                            </div>
+                                                            <div class="cart-item__right">
+                                                                <div class="cart-item__price">379&nbsp;₽</div>
+                                                                <button class="cart-item__reset">
+                                                                    <svg class="reset-icon">
+                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cart-item">
+                                                            <div class="cart-item__left">
+                                                                <div class="cart-item__pic">
+                                                                    <img src="/src/img/roll1.png" alt="roll">
+                                                                </div>
+                                                                <div class="cart-item__number">x 1</div>
+                                                                <div class="cart-item__name">Банзай</div>
+                                                            </div>
+                                                            <div class="cart-item__right">
+                                                                <div class="cart-item__price">379&nbsp;₽</div>
+                                                                <button class="cart-item__reset">
+                                                                    <svg class="reset-icon">
+                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cart-item">
+                                                            <div class="cart-item__left">
+                                                                <div class="cart-item__pic">
+                                                                    <img src="/src/img/roll1.png" alt="roll">
+                                                                </div>
+                                                                <div class="cart-item__number">x 1</div>
+                                                                <div class="cart-item__name">Банзай</div>
+                                                            </div>
+                                                            <div class="cart-item__right">
+                                                                <div class="cart-item__price">379&nbsp;₽</div>
+                                                                <button class="cart-item__reset">
+                                                                    <svg class="reset-icon">
+                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cart-item">
+                                                            <div class="cart-item__left">
+                                                                <div class="cart-item__pic">
+                                                                    <img src="/src/img/roll1.png" alt="roll">
+                                                                </div>
+                                                                <div class="cart-item__number">x 1</div>
+                                                                <div class="cart-item__name">Банзай</div>
+                                                            </div>
+                                                            <div class="cart-item__right">
+                                                                <div class="cart-item__price">379&nbsp;₽</div>
+                                                                <button class="cart-item__reset">
+                                                                    <svg class="reset-icon">
+                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cart-item">
+                                                            <div class="cart-item__left">
+                                                                <div class="cart-item__pic">
+                                                                    <img src="/src/img/roll1.png" alt="roll">
+                                                                </div>
+                                                                <div class="cart-item__number">x 1</div>
+                                                                <div class="cart-item__name">Банзай</div>
+                                                            </div>
+                                                            <div class="cart-item__right">
+                                                                <div class="cart-item__price">379&nbsp;₽</div>
+                                                                <button class="cart-item__reset">
+                                                                    <svg class="reset-icon">
+                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cart-popup__bottom">
+                                                    <div class="cart-popup__bottom-inner">
+                                                        <div class="cart-popup__left">4 позиции</div>
+                                                        <div class="cart-popup__right">
+                                                            <div class="cart-popup__sum">1,379&nbsp;₽</div>
+                                                            <button class="button button_border cart-popup__button">В корзину</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="personal-block profile-block">
+                                        <div class="personal-block__visual">
+                                            <svg class="personal-icon">
+                                                <use xlink:href="img/icons/sprite.svg#personal"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="personal-block__text personal-block__text_default">Войти</span>
+                                        <div class="personal-block__text">
+                                            174
+                                            <img src="./img/icons/light.svg" alt="points">
+                                        </div>
+                                        <a href="#" class="personal-block__link"></a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="personal-block profile-block">
-                                <div class="personal-block__visual">
-                                    <svg class="personal-icon">
-                                        <use xlink:href="img/icons/sprite.svg#personal"></use>
-                                    </svg>
-                                </div>
-                                <span class="personal-block__text personal-block__text_default">Войти</span>
-                                <div class="personal-block__text">
-                                    174
-                                    <img src="./img/icons/light.svg" alt="points">
-                                </div>
-                                <a href="#" class="personal-block__link"></a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -273,64 +293,67 @@
             </section>
             <section class="promo" id="combo">
                 <div class="container">
-                    <div class="promo__row">
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo1.png" alt="promo">
+                    <div class="promo__container">
+                        <div class="promo__row">
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo1.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo2.png" alt="promo">
+                            </article>
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo2.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo3.png" alt="promo">
+                            </article>
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo3.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo4.png" alt="promo">
+                            </article>
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo4.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo5.png" alt="promo">
+                            </article>
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo5.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo6.png" alt="promo">
+                            </article>
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo6.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="promo-card">
-                            <a href="#" class="promo-card__link"></a>
-                            <div class="promo-card__bg">
-                                <div class="promo-card__content">
-                                    <img src="/src/img/promo7.png" alt="promo">
+                            </article>
+                            <article class="promo-card">
+                                <a href="#" class="promo-card__link"></a>
+                                <div class="promo-card__bg">
+                                    <div class="promo-card__content">
+                                        <img src="/src/img/promo7.png" alt="promo">
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
+                    
                 </div>
             </section>
             <section class="products" id="rolls">
