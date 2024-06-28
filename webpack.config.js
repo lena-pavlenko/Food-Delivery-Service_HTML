@@ -29,6 +29,10 @@ module.exports = {
             template: path.resolve(__dirname, 'src', 'index.html'),
             minify: false,
         }),
+        new HtmlWebpackPlugin({  // Also generate a test.html
+            filename: 'product.html',
+            template: path.resolve(__dirname, 'src', 'product.html')
+          }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
             ignoreOrder: false

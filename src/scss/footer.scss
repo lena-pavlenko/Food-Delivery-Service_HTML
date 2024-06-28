@@ -30,6 +30,15 @@
         break-inside: avoid;
         display: block;
 
+        .nav-menu__item {
+
+            &:hover {
+                .nav-menu__link {
+                    color: $textLight;
+                }
+            }
+        }
+
         .nav-menu__item:not(.compact-menu__item:last-child) {
             margin-bottom: 30px;
         }
