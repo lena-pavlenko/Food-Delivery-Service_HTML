@@ -18,29 +18,40 @@
                 object-fit: contain;
             }
         }
-    
-        .swiper-button-next {
-            right: -30px;
-    
+
+        .swiper-button {
+            position: absolute;
+            top: 50%;
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: all ease .3s;
+
             &::after {
                 display: none;
             }
-    
-            svg {
+
+            .shevron-icon {
                 height: 20px;
             }
-        }
-    
-        .swiper-button-prev {
-            left: -30px;
-    
-            &::after {
-                display: none;
+
+            &_next {
+                right: -30px;
             }
-    
-            svg {
-                height: 20px;
-                transform: rotate(-180deg);
+
+            &_prev {
+                left: -30px;
+
+                .shevron-icon {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            &:hover {
+                .shevron-icon {
+                    stroke: $accentColorHover;
+                }
             }
         }
     

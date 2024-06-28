@@ -1,934 +1,938 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__content">
-                    <div class="header__row">
-                        <a href="/" class="logo header__logo header__logo_mob">
-                            <img src="./img/logo.svg" alt="Джонни Тунец">
-                        </a>
-                        <div class="transformer-menu">
-                            <div class="header__leftside">
-                                <a href="/" class="logo header__logo">
-                                    <img src="./img/logo.svg" alt="Джонни Тунец">
-                                </a>
-                                <div class="city-select">
-                                    <div class="city-select__visible">
-                                        <svg class="location-icon">
-                                            <use xlink:href="img/icons/sprite.svg#location"></use>
-                                        </svg>
-                                        <div class="city-select__field">
-                                            <input type="hidden" value="Краснодар" name="city">
-                                            <span class="city-select__text">Краснодар</span>
-                                        </div>
-                                        <button class="city-select__btn">
-                                            <svg class="shevron-icon">
-                                                <use xlink:href="img/icons/sprite.svg#shevron"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <!-- <ul class="city-select__list">
-                                        <li class="city-select__item">Краснодар</li>
-                                        <li class="city-select__item">Волгоград</li>
-                                        <li class="city-select__item">Саратов</li>
-                                    </ul> -->
-                                </div>
-                                <ul class="nav-menu header__nav-menu">
-                                    <li class="nav-menu__item">
-                                        <a href="#" class="nav-menu__link">Акции</a>
-                                    </li>
-                                    <li class="nav-menu__item">
-                                        <a href="#" class="nav-menu__link">О нас</a>
-                                    </li>
-                                    <li class="nav-menu__item">
-                                        <a href="#" class="nav-menu__link">Доставка</a>
-                                    </li>
-                                    <li class="nav-menu__item">
-                                        <a href="#" class="nav-menu__link">Контакты</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="header__rightside">
-                                <div class="phone-block">
-                                    <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
-                                    <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="menu-trigger transformer-menu__menu-trigger">
-                            <svg class="burger-icon">
-                                <use xlink:href="img/icons/sprite.svg#burger"></use>
-                            </svg>
-                        </button>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__row">
+            <a href="/" class="logo header__logo header__logo_mob">
+              <img src="./img/logo.svg" alt="Джонни Тунец">
+            </a>
+            <div class="transformer-menu">
+              <div class="header__leftside">
+                <a href="/" class="logo header__logo">
+                  <img src="./img/logo.svg" alt="Джонни Тунец">
+                </a>
+                <div class="city-select" id="citySelect">
+                  <div class="city-select__visible">
+                    <svg class="location-icon">
+                      <use xlink:href="img/icons/sprite.svg#location"></use>
+                    </svg>
+                    <div class="city-select__field">
+                      <input type="hidden" value="Краснодар" name="city">
+                      <span class="city-select__text">Краснодар</span>
                     </div>
-                    <div class="header__row">
-                        <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" alt="Джонни Тунец"></div>
-                        <div class="header__leftside header__leftside_border-r">
-                            <nav class="menu-products header__menu-products">
-                                <a href="#" class="menu-products__link">Комбо наборы</a>
-                                <a href="#" class="menu-products__link">Пицца</a>
-                                <a href="#" class="menu-products__link">Роллы</a>
-                                <a href="#" class="menu-products__link">Суши</a>
-                                <a href="#" class="menu-products__link">Сеты</a>
-                                <a href="#" class="menu-products__link">Вок и закуски</a>
-                                <a href="#" class="menu-products__link">Салаты</a>
-                                <a href="#" class="menu-products__link">Десерты</a>
-                                <a href="#" class="menu-products__link">Напитки</a>
-                                <a href="#" class="menu-products__link">Дополнительно</a>
-                            </nav>
-                            <div class="search-block">
-                                <div class="search-block__control">
-                                    <input type="text" class="search-block__input">
-                                    <button class="search-block__reset">
-                                        <svg class="reset-icon">
-                                            <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                        </svg>
-                                    </button>
-                                    <button class="search-block__button button">Найти</button>
+                    <button class="city-select__btn" type="button">
+                      <svg class="shevron-icon">
+                        <use xlink:href="img/icons/sprite.svg#shevron"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="city-select__drop"></div>
+                </div>
+                <ul class="nav-menu header__nav-menu">
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Акции</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">О нас</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Доставка</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__rightside">
+                <div class="phone-block">
+                  <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
+                  <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
+                </div>
+              </div>
+            </div>
+            <button class="menu-trigger transformer-menu__menu-trigger">
+              <svg class="burger-icon">
+                <use xlink:href="img/icons/sprite.svg#burger"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header__row">
+            <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" alt="Джонни Тунец"></div>
+            <div class="header__leftside header__leftside_border-r">
+              <nav class="menu-products header__menu-products">
+                <a href="#" class="menu-products__link">Комбо наборы</a>
+                <a href="#" class="menu-products__link">Пицца</a>
+                <a href="#" class="menu-products__link">Роллы</a>
+                <a href="#" class="menu-products__link">Суши</a>
+                <a href="#" class="menu-products__link">Сеты</a>
+                <a href="#" class="menu-products__link">Вок и закуски</a>
+                <a href="#" class="menu-products__link">Салаты</a>
+                <a href="#" class="menu-products__link">Десерты</a>
+                <a href="#" class="menu-products__link">Напитки</a>
+                <a href="#" class="menu-products__link">Дополнительно</a>
+              </nav>
+              <div class="search-block">
+                <div class="search-block__control">
+                  <input type="text" class="search-block__input" placeholder="Поиск...">
+                  <button class="search-block__reset">
+                    <svg class="reset-icon">
+                      <use xlink:href="img/icons/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                  <button class="search-block__button button">Найти</button>
+                </div>
+                <button class="search-block__btn">
+                  <svg class="search-icon">
+                    <use xlink:href="img/icons/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="header__rightside">
+              <div class="hide-menu">
+                <button class="menu-trigger hide-menu__menu-trigger">
+                  <svg class="burger-icon">
+                    <use xlink:href="img/icons/sprite.svg#burger"></use>
+                  </svg>
+                </button>
+                <div class="hide-menu__content">
+                  <div class="cart-block personal-block">
+                    <div class="personal-block__visual">
+                      <svg class="cart-icon">
+                        <use xlink:href="img/icons/sprite.svg#cart"></use>
+                      </svg>
+                      <div class="cart-block__summ">3</div>
+                    </div>
+                    <span class="personal-block__text personal-block__text_default">Корзина</span>
+                    <div class="personal-block__text">1 089₽</div>
+                    <a href="#" class="personal-block__link"></a>
+                    <div class="cart-popup">
+                      <div class="cart-popup__content">
+                        <div class="cart-popup__top">
+                          <ul class="cart-popup__list">
+                            <li class="cart-item">
+                              <div class="cart-item__left">
+                                <div class="cart-item__pic">
+                                  <img src="/src/img/roll1.png" alt="roll">
                                 </div>
-                                <button class="search-block__btn">
-                                    <svg class="search-icon">
-                                        <use xlink:href="img/icons/sprite.svg#search"></use>
-                                    </svg>
+                                <div class="cart-item__number">x 1</div>
+                                <div class="cart-item__name">Банзай</div>
+                              </div>
+                              <div class="cart-item__right">
+                                <div class="cart-item__price">379&nbsp;₽</div>
+                                <button class="cart-item__reset">
+                                  <svg class="reset-icon">
+                                    <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                  </svg>
                                 </button>
-                            </div>
-                        </div>
-                        <div class="header__rightside">
-                            <div class="hide-menu">
-                                <button class="menu-trigger hide-menu__menu-trigger">
-                                    <svg class="burger-icon">
-                                        <use xlink:href="img/icons/sprite.svg#burger"></use>
-                                    </svg>
+                              </div>
+                            </li>
+                            <li class="cart-item">
+                              <div class="cart-item__left">
+                                <div class="cart-item__pic">
+                                  <img src="/src/img/roll1.png" alt="roll">
+                                </div>
+                                <div class="cart-item__number">x 1</div>
+                                <div class="cart-item__name">Банзай</div>
+                              </div>
+                              <div class="cart-item__right">
+                                <div class="cart-item__price">379&nbsp;₽</div>
+                                <button class="cart-item__reset">
+                                  <svg class="reset-icon">
+                                    <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                  </svg>
                                 </button>
-                                <div class="hide-menu__content">
-                                    <div class="cart-block personal-block">
-                                        <div class="personal-block__visual">
-                                            <svg class="cart-icon">
-                                                <use xlink:href="img/icons/sprite.svg#cart"></use>
-                                            </svg>
-                                            <div class="cart-block__summ">3</div>
-                                        </div>
-                                        <span class="personal-block__text personal-block__text_default">Корзина</span>
-                                        <div class="personal-block__text">1 089₽</div>
-                                        <a href="#" class="personal-block__link"></a>
-                                        <div class="cart-popup">
-                                            <div class="cart-popup__content">
-                                                <div class="cart-popup__top">
-                                                    <ul class="cart-popup__list">
-                                                        <li class="cart-item">
-                                                            <div class="cart-item__left">
-                                                                <div class="cart-item__pic">
-                                                                    <img src="/src/img/roll1.png" alt="roll">
-                                                                </div>
-                                                                <div class="cart-item__number">x 1</div>
-                                                                <div class="cart-item__name">Банзай</div>
-                                                            </div>
-                                                            <div class="cart-item__right">
-                                                                <div class="cart-item__price">379&nbsp;₽</div>
-                                                                <button class="cart-item__reset">
-                                                                    <svg class="reset-icon">
-                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                        <li class="cart-item">
-                                                            <div class="cart-item__left">
-                                                                <div class="cart-item__pic">
-                                                                    <img src="/src/img/roll1.png" alt="roll">
-                                                                </div>
-                                                                <div class="cart-item__number">x 1</div>
-                                                                <div class="cart-item__name">Банзай</div>
-                                                            </div>
-                                                            <div class="cart-item__right">
-                                                                <div class="cart-item__price">379&nbsp;₽</div>
-                                                                <button class="cart-item__reset">
-                                                                    <svg class="reset-icon">
-                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                        <li class="cart-item">
-                                                            <div class="cart-item__left">
-                                                                <div class="cart-item__pic">
-                                                                    <img src="/src/img/roll1.png" alt="roll">
-                                                                </div>
-                                                                <div class="cart-item__number">x 1</div>
-                                                                <div class="cart-item__name">Банзай</div>
-                                                            </div>
-                                                            <div class="cart-item__right">
-                                                                <div class="cart-item__price">379&nbsp;₽</div>
-                                                                <button class="cart-item__reset">
-                                                                    <svg class="reset-icon">
-                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                        <li class="cart-item">
-                                                            <div class="cart-item__left">
-                                                                <div class="cart-item__pic">
-                                                                    <img src="/src/img/roll1.png" alt="roll">
-                                                                </div>
-                                                                <div class="cart-item__number">x 1</div>
-                                                                <div class="cart-item__name">Банзай</div>
-                                                            </div>
-                                                            <div class="cart-item__right">
-                                                                <div class="cart-item__price">379&nbsp;₽</div>
-                                                                <button class="cart-item__reset">
-                                                                    <svg class="reset-icon">
-                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                        <li class="cart-item">
-                                                            <div class="cart-item__left">
-                                                                <div class="cart-item__pic">
-                                                                    <img src="/src/img/roll1.png" alt="roll">
-                                                                </div>
-                                                                <div class="cart-item__number">x 1</div>
-                                                                <div class="cart-item__name">Банзай</div>
-                                                            </div>
-                                                            <div class="cart-item__right">
-                                                                <div class="cart-item__price">379&nbsp;₽</div>
-                                                                <button class="cart-item__reset">
-                                                                    <svg class="reset-icon">
-                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                        <li class="cart-item">
-                                                            <div class="cart-item__left">
-                                                                <div class="cart-item__pic">
-                                                                    <img src="/src/img/roll1.png" alt="roll">
-                                                                </div>
-                                                                <div class="cart-item__number">x 1</div>
-                                                                <div class="cart-item__name">Банзай</div>
-                                                            </div>
-                                                            <div class="cart-item__right">
-                                                                <div class="cart-item__price">379&nbsp;₽</div>
-                                                                <button class="cart-item__reset">
-                                                                    <svg class="reset-icon">
-                                                                        <use xlink:href="img/icons/sprite.svg#cross"></use>
-                                                                    </svg>
-                                                                </button>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cart-popup__bottom">
-                                                    <div class="cart-popup__bottom-inner">
-                                                        <div class="cart-popup__left">4 позиции</div>
-                                                        <div class="cart-popup__right">
-                                                            <div class="cart-popup__sum">1,379&nbsp;₽</div>
-                                                            <button class="button button_border cart-popup__button">В корзину</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="personal-block profile-block">
-                                        <div class="personal-block__visual">
-                                            <svg class="personal-icon">
-                                                <use xlink:href="img/icons/sprite.svg#personal"></use>
-                                            </svg>
-                                        </div>
-                                        <span class="personal-block__text personal-block__text_default">Войти</span>
-                                        <div class="personal-block__text">
-                                            174
-                                            <img src="./img/icons/light.svg" alt="points">
-                                        </div>
-                                        <a href="#" class="personal-block__link"></a>
-                                    </div>
+                              </div>
+                            </li>
+                            <li class="cart-item">
+                              <div class="cart-item__left">
+                                <div class="cart-item__pic">
+                                  <img src="/src/img/roll1.png" alt="roll">
                                 </div>
-                            </div>
-                            
+                                <div class="cart-item__number">x 1</div>
+                                <div class="cart-item__name">Банзай</div>
+                              </div>
+                              <div class="cart-item__right">
+                                <div class="cart-item__price">379&nbsp;₽</div>
+                                <button class="cart-item__reset">
+                                  <svg class="reset-icon">
+                                    <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="cart-item">
+                              <div class="cart-item__left">
+                                <div class="cart-item__pic">
+                                  <img src="/src/img/roll1.png" alt="roll">
+                                </div>
+                                <div class="cart-item__number">x 1</div>
+                                <div class="cart-item__name">Банзай</div>
+                              </div>
+                              <div class="cart-item__right">
+                                <div class="cart-item__price">379&nbsp;₽</div>
+                                <button class="cart-item__reset">
+                                  <svg class="reset-icon">
+                                    <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="cart-item">
+                              <div class="cart-item__left">
+                                <div class="cart-item__pic">
+                                  <img src="/src/img/roll1.png" alt="roll">
+                                </div>
+                                <div class="cart-item__number">x 1</div>
+                                <div class="cart-item__name">Банзай</div>
+                              </div>
+                              <div class="cart-item__right">
+                                <div class="cart-item__price">379&nbsp;₽</div>
+                                <button class="cart-item__reset">
+                                  <svg class="reset-icon">
+                                    <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="cart-item">
+                              <div class="cart-item__left">
+                                <div class="cart-item__pic">
+                                  <img src="/src/img/roll1.png" alt="roll">
+                                </div>
+                                <div class="cart-item__number">x 1</div>
+                                <div class="cart-item__name">Банзай</div>
+                              </div>
+                              <div class="cart-item__right">
+                                <div class="cart-item__price">379&nbsp;₽</div>
+                                <button class="cart-item__reset">
+                                  <svg class="reset-icon">
+                                    <use xlink:href="img/icons/sprite.svg#cross"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
+                        <div class="cart-popup__bottom">
+                          <div class="cart-popup__bottom-inner">
+                            <div class="cart-popup__left">4 позиции</div>
+                            <div class="cart-popup__right">
+                              <div class="cart-popup__sum">1,379&nbsp;₽</div>
+                              <button class="button button_border cart-popup__button">В корзину</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="personal-block profile-block">
+                    <div class="personal-block__visual">
+                      <svg class="personal-icon">
+                        <use xlink:href="img/icons/sprite.svg#personal"></use>
+                      </svg>
+                    </div>
+                    <span class="personal-block__text personal-block__text_default">Войти</span>
+                    <div class="personal-block__text">
+                      174
+                      <img src="./img/icons/light.svg" alt="points">
+                    </div>
+                    <a href="#" class="personal-block__link"></a>
+                  </div>
                 </div>
+              </div>
+
             </div>
-        </header>
-        <main class="main">
-            <section class="banner">
-                <div class="container">
-                    <div class="banner-slider">
-                        <div class="swiper banner-slider__swiper" data-swiper="banner">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide banner-slider__swiper-slide">
-                                    <img src="/src/img/banner1.jpg" alt="tunets">
-                                </div>
-                                <div class="swiper-slide banner-slider__swiper-slide">
-                                    <img src="/src/img/banner2.jpg" alt="tunets">
-                                </div>
-                                <div class="swiper-slide banner-slider__swiper-slide">
-                                    <img src="/src/img/banner3.jpg" alt="tunets">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination" data-swiperPagination="bannerPagination"></div>
-                        <div class="swiper-button-prev" data-swiperNav="bannerPrev">
-                            <svg class="shevron-icon">
-                                <use xlink:href="img/icons/sprite.svg#shevron"></use>
-                            </svg>
-                        </div>
-                        <div class="swiper-button-next" data-swiperNav="bannerNext">
-                            <svg class="shevron-icon">
-                                <use xlink:href="img/icons/sprite.svg#shevron"></use>
-                            </svg>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="banner">
+        <div class="container">
+          <div class="banner-slider">
+            <div class="swiper banner-slider__swiper" data-swiper="banner">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide banner-slider__swiper-slide">
+                  <img src="/src/img/banner1.jpg" alt="tunets">
                 </div>
-            </section>
-            <section class="promo" id="combo">
-                <div class="container">
-                    <div class="promo__container">
-                        <div class="promo__row">
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo1.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo2.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo3.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo4.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo5.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo6.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="promo-card">
-                                <a href="#" class="promo-card__link"></a>
-                                <div class="promo-card__bg">
-                                    <div class="promo-card__content">
-                                        <img src="/src/img/promo7.png" alt="promo">
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    
+                <div class="swiper-slide banner-slider__swiper-slide">
+                  <img src="/src/img/banner2.jpg" alt="tunets">
                 </div>
-            </section>
-            <section class="products" id="rolls">
-                <div class="container">
-                    <h2 class="title title_h2 products__title_h2">
-                        <a href="#">Роллы</a>
-                    </h2>
-                    <div class="product-filter">
-                        <button class="product-filter__button product-filter__button_current">Все</button>
-                        <button class="product-filter__button">Филадельфия</button>
-                        <button class="product-filter__button">Холодные</button>
-                        <button class="product-filter__button">Запечённые</button>
-                        <button class="product-filter__button">Горячие</button>
-                        <button class="product-filter__button">Острые</button>
-                    </div>
-                    <div class="products-grid">
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll1.png" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll2.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll3.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll4.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll5.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll1.png" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll2.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll3.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll4.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/roll5.jpeg" alt="roll">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Банзай</a>
-                                </h3>
-                                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">379&nbsp;₽</span>
-                                    <span>/</span> 
-                                    <span class="product-card__quant">240&nbsp;г</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                <div class="swiper-slide banner-slider__swiper-slide">
+                  <img src="/src/img/banner3.jpg" alt="tunets">
                 </div>
-            </section>
-            <section class="products" id="pizza">
-                <div class="container">
-                    <h2 class="title title_h2 products__title_h2">
-                        <a href="#">Пицца</a>
-                    </h2>
-                    <div class="products-grid">
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza2.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza3.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza2.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza3.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza2.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza3.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <div class="product-card__top">
-                                <a href="#">
-                                    <img src="/src/img/pizza1.jpeg" alt="pizza">
-                                </a>
-                            </div>
-                            <div class="product-card__desc">
-                                <h3 class="title title_h3 product-card__title">
-                                    <a href="#">Пепперони Фреш</a>
-                                </h3>
-                                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__right">
-                                    <span class="product-card__price">от 379&nbsp;₽</span>
-                                </div>
-                                <button class="button product-card__button">Выбрать</button>
-                                <div class="count-button product-card__count-button">
-                                    <button class="count-button__action" data-countbtn="minus">-</button>
-                                    <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                                    <button class="count-button__action" data-countbtn="plus">+</button>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer__top">
-                <div class="container">
-                    <div class="footer__content">
-                        <div class="footer__menu">
-                            <span class="footer__menu-title">Навигация</span>
-                            <ul class="nav-menu footer__nav-menu">
-                                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Акции</a></li>
-                                <li class="nav-menu__item"><a href="#" class="nav-menu__link">О нас</a></li>
-                                <li class="nav-menu__item"><a href="" class="nav-menu__link">Доставка</a></li>
-                                <li class="nav-menu__item"><a href="" class="nav-menu__link">Контакты</a></li>
-                                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Правовая информация</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__social">
-                            <div class="social-block footer__social-block">
-                                <span class="social-block__text">Заказывайте по телефону</span>
-                                <a href="tel:89990009999" class="social-block__info">+7 (999) 999-99-99</a>
-                            </div>
-                            <div class="social-block footer__social-block">
-                                <span class="social-block__text">Доставка работает</span>
-                                <span class="social-block__info">с 10:30 до 23:30</span>
-                            </div>
-                            <a href="#" class="social-link"><img src="/src/img/icons/vk.svg" alt="vk"></a>
-                        </div>
-                        <div class="footer__info">
-                            <a href="/" class="logo footer__logo">
-                                <img src="/src/img/logo.svg" alt="Джонни Тунец">
-                            </a>
-                            <p class="footer__info-text">Любимые блюда в приложении! Скачай сейчас!</p>
-                            <div class="footer__apps">
-                                <a href="#" class="app-item"><img src="/src/img/googleplay.png" alt="googleplay"></a>
-                                <a href="#" class="app-item"><img src="/src/img/appstore.png" alt="appstore"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="footer__bottom">
-                <div class="container">
-                    <p class="footer__rights">
-                        2023 © «Джонни Тунец» - Новая волна вкуса
-                    </p>
+            <div class="swiper-pagination" type="button" data-swiperPagination="bannerPagination"></div>
+            <button class="swiper-button swiper-button_prev" data-swiperNav="bannerPrev">
+              <svg class="shevron-icon">
+                <use xlink:href="img/icons/sprite.svg#shevron"></use>
+              </svg>
+            </button>
+            <button class="swiper-button swiper-button_next" type="button" data-swiperNav="bannerNext">
+              <svg class="shevron-icon">
+                <use xlink:href="img/icons/sprite.svg#shevron"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="promo" id="combo">
+        <div class="container">
+          <div class="promo__container">
+            <div class="promo__row">
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo1.png" alt="promo">
+                  </div>
                 </div>
+              </article>
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo2.png" alt="promo">
+                  </div>
+                </div>
+              </article>
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo3.png" alt="promo">
+                  </div>
+                </div>
+              </article>
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo4.png" alt="promo">
+                  </div>
+                </div>
+              </article>
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo5.png" alt="promo">
+                  </div>
+                </div>
+              </article>
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo6.png" alt="promo">
+                  </div>
+                </div>
+              </article>
+              <article class="promo-card">
+                <a href="#" class="promo-card__link"></a>
+                <div class="promo-card__bg">
+                  <div class="promo-card__content">
+                    <img src="/src/img/promo7.png" alt="promo">
+                  </div>
+                </div>
+              </article>
             </div>
-        </footer>
-    </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="products" id="rolls">
+        <div class="container">
+          <h2 class="title title_h2 products__title_h2">
+            <a href="#">Роллы</a>
+          </h2>
+          <div class="product-filter">
+            <button class="product-filter__button product-filter__button_current">Все</button>
+            <button class="product-filter__button">Филадельфия</button>
+            <button class="product-filter__button">Холодные</button>
+            <button class="product-filter__button">Запечённые</button>
+            <button class="product-filter__button">Горячие</button>
+            <button class="product-filter__button">Острые</button>
+          </div>
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll1.png" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll2.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll3.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll4.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll5.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll1.png" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll2.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll3.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll4.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/roll5.jpeg" alt="roll">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Банзай</a>
+                </h3>
+                <p class="product-card__text">Нори, японский рис, творожный сыр Cremette, креветка темпура</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">379&nbsp;₽</span>
+                  <span>/</span>
+                  <span class="product-card__quant">240&nbsp;г</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="products" id="pizza">
+        <div class="container">
+          <h2 class="title title_h2 products__title_h2">
+            <a href="#">Пицца</a>
+          </h2>
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza2.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza3.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza2.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza3.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza2.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza3.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-card__top">
+                <a href="#">
+                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                </a>
+              </div>
+              <div class="product-card__desc">
+                <h3 class="title title_h3 product-card__title">
+                  <a href="#">Пепперони Фреш</a>
+                </h3>
+                <p class="product-card__text">Томатный соус, моцарелла, копчёная колбаска, томаты, cушеный базилик</p>
+              </div>
+              <div class="product-card__bottom">
+                <div class="product-card__right">
+                  <span class="product-card__price">от 379&nbsp;₽</span>
+                </div>
+                <button class="button product-card__button">Выбрать</button>
+                <div class="count-button product-card__count-button">
+                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <input type="text" readonly class="count-button__field" name="numberProds" value="1">
+                  <button class="count-button__action" data-countbtn="plus">+</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__menu">
+              <span class="footer__menu-title">Навигация</span>
+              <ul class="nav-menu footer__nav-menu">
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Акции</a></li>
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">О нас</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Доставка</a></li>
+                <li class="nav-menu__item"><a href="" class="nav-menu__link">Контакты</a></li>
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Правовая информация</a></li>
+              </ul>
+            </div>
+            <div class="footer__social">
+              <div class="social-block footer__social-block">
+                <span class="social-block__text">Заказывайте по телефону</span>
+                <a href="tel:89990009999" class="social-block__info">+7 (999) 999-99-99</a>
+              </div>
+              <div class="social-block footer__social-block">
+                <span class="social-block__text">Доставка работает</span>
+                <span class="social-block__info">с 10:30 до 23:30</span>
+              </div>
+              <a href="#" class="social-link"><img src="/src/img/icons/vk.svg" alt="vk"></a>
+            </div>
+            <div class="footer__info">
+              <a href="/" class="logo footer__logo">
+                <img src="/src/img/logo.svg" alt="Джонни Тунец">
+              </a>
+              <p class="footer__info-text">Любимые блюда в приложении! Скачай сейчас!</p>
+              <div class="footer__apps">
+                <a href="#" class="app-item"><img src="/src/img/googleplay.png" alt="googleplay"></a>
+                <a href="#" class="app-item"><img src="/src/img/appstore.png" alt="appstore"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__rights">
+            2023 © «Джонни Тунец» - Новая волна вкуса
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <button class="up">
+    <svg class="arrow-icon">
+      <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
+    </svg>
+  </button>
 </body>
+
 </html>
