@@ -297,29 +297,36 @@ path {
   }
 
   &__field {
-    color: $textLight;
-    font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
-    font-weight: 500;
-    line-height: 1;
-
-    // &:hover {
-    //   color: $textDark;
-    // }
-  }
-
-  &__btn {
     background-color: transparent;
     border: none;
     padding: 0;
-    transform: rotate(90deg);
     cursor: pointer;
+    color: $textLight;
+    font-family: 'Montserrat';
+    font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
+    font-weight: 500;
+    line-height: 1;
+    width: 93px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     transition: all ease .3s;
 
     &:hover {
+      color: $textDark;
+    }
+
+    &:hover + .city-select__arrow {
       .shevron-icon {
         stroke: $accentColorHover;
       }
     }
+  }
+
+  &__arrow {
+    rotate: 90deg;
+    transition: rotate .3s;
+    cursor: pointer;
   }
 
   &__drop {
@@ -364,8 +371,8 @@ path {
       max-height: 380px;
     }
 
-    .city-select__btn {
-      rotate: 180deg;
+    .city-select__arrow {
+      rotate: -90deg;
     }
 
   }

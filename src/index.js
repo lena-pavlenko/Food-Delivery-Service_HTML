@@ -78,12 +78,33 @@ window.onload = function() {
   // Выпадашка с городом
   const citySelectParent = document.getElementById('citySelect')
 
-
-
   citySelectParent.addEventListener('click', (e) => {
-    if (e.target.closest('.city-select__btn')) {
+    if (e.target.closest('.city-select__visible')) {
       citySelectParent.classList.toggle('opened')
       injectItems(cityArray)
+    }
+
+    if (e.target.closest('.city-select__item')) {
+      citySelectParent.querySelectorAll('.city-select__item').forEach(item => {
+        item.classList.remove('city-select__item_current')
+      })
+      e.target.closest('.city-select__item').classList.add('city-select__item_current')
+
+      citySelectParent.querySelector('.city-select__text').innerText = e.target.closest('.city-select__item').innerText
+      citySelectParent.querySelector('input').value = e.target.closest('.city-select__item').dataset.id
+
+      cityArray.forEach(el => {
+        if (el.id === Number(e.target.closest('.city-select__item').dataset.id)) {
+          el.isCurrent = true
+        } else {
+          el.isCurrent = false
+        }
+
+      })
+
+      if (citySelectParent.classList.contains('opened')) {
+        citySelectParent.classList.remove('opened')
+      }
     }
     
   })
@@ -92,40 +113,52 @@ window.onload = function() {
     {
       id: 1,
       name: 'Волгоград',
+      isCurrent: false,
     },
     {
       id: 2,
       name: 'Москва',
+      isCurrent: false,
     },
     {
       id: 3,
       name: 'Санкт-Петербург',
+      isCurrent: false,
     },
     {
       id: 4,
       name: 'Уфа',
+      isCurrent: false,
     },
     {
       id: 5,
       name: 'Краснодар',
+      isCurrent: false,
     },
     {
       id: 6,
       name: 'Петропавловск-Камчатский',
+      isCurrent: false,
     },
     {
       id: 7,
       name: 'Комсомольск-на-Амуре',
+      isCurrent: false,
     },
     {
       id: 8,
       name: 'Орел',
+      isCurrent: false,
     },
   ]
 
+  const chooseOption = (id) => {
+
+  }
+
   
-  const renderItem = (city) => {
-    return `<li class="city-select__item">${city.name}</li>`
+  const renderItem = ({name, id, isCurrent}) => {
+    return `<li class="city-select__item ${isCurrent ? 'city-select__item_current' : ''}" data-id="${id}">${name}</li>`
   }
 
   const injectItems = (array) => {
