@@ -93,14 +93,7 @@ window.onload = function() {
       citySelectParent.querySelector('.city-select__text').innerText = e.target.closest('.city-select__item').innerText
       citySelectParent.querySelector('input').value = e.target.closest('.city-select__item').dataset.id
 
-      cityArray.forEach(el => {
-        if (el.id === Number(e.target.closest('.city-select__item').dataset.id)) {
-          el.isCurrent = true
-        } else {
-          el.isCurrent = false
-        }
-
-      })
+      chooseOption(e.target.closest('.city-select__item').dataset.id, cityArray)
 
       if (citySelectParent.classList.contains('opened')) {
         citySelectParent.classList.remove('opened')
@@ -152,8 +145,8 @@ window.onload = function() {
     },
   ]
 
-  const chooseOption = (id) => {
-
+  const chooseOption = (id, array) => {
+    array.forEach(el => el.id === Number(id) ? el.isCurrent = true : el.isCurrent = false)
   }
 
   
