@@ -223,10 +223,15 @@ path {
   align-items: center;
   justify-content: center;
   width: 59px;
+  height: 37px;
   margin: 0 auto;
+  font-size: 0;
 
-  img {
-    width: 100%;
+  &_vk {
+    background-image: url(../img/icons/vk.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

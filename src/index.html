@@ -61,14 +61,14 @@
                 </div>
               </div>
             </div>
-            <button class="menu-trigger transformer-menu__menu-trigger">
+            <button class="menu-trigger transformer-menu__menu-trigger" aria-label="Кнопка управления мобильным меню">
               <svg class="burger-icon">
                 <use xlink:href="img/icons/sprite.svg#burger"></use>
               </svg>
             </button>
           </div>
           <div class="header__row">
-            <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" alt="Джонни Тунец"></div>
+            <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" loading="lazy" alt="Джонни Тунец"></div>
             <div class="header__leftside header__leftside_border-r">
               <nav class="menu-products header__menu-products">
                 <a href="#" class="menu-products__link">Комбо наборы</a>
@@ -84,15 +84,15 @@
               </nav>
               <div class="search-block">
                 <div class="search-block__control">
-                  <input type="text" class="search-block__input" placeholder="Поиск...">
-                  <button class="search-block__reset">
+                  <input type="text" class="search-block__input" name="q" placeholder="Поиск...">
+                  <button class="search-block__reset" aria-label="Отменить ввод">
                     <svg class="reset-icon">
                       <use xlink:href="img/icons/sprite.svg#cross"></use>
                     </svg>
                   </button>
-                  <button class="search-block__button button">Найти</button>
+                  <button class="search-block__button button" type="button">Найти</button>
                 </div>
-                <button class="search-block__btn">
+                <button class="search-block__btn" type="button" aria-label="Кнопка управления полем поиска">
                   <svg class="search-icon">
                     <use xlink:href="img/icons/sprite.svg#search"></use>
                   </svg>
@@ -101,7 +101,7 @@
             </div>
             <div class="header__rightside">
               <div class="hide-menu">
-                <button class="menu-trigger hide-menu__menu-trigger">
+                <button class="menu-trigger hide-menu__menu-trigger" aria-label="Кнопка управления мобильным меню">
                   <svg class="burger-icon">
                     <use xlink:href="img/icons/sprite.svg#burger"></use>
                   </svg>
@@ -124,7 +124,7 @@
                             <li class="cart-item">
                               <div class="cart-item__left">
                                 <div class="cart-item__pic">
-                                  <img src="/src/img/roll1.png" alt="roll">
+                                  <img src="/src/img/roll1.webp" alt="roll">
                                 </div>
                                 <div class="cart-item__number">x 1</div>
                                 <div class="cart-item__name">Банзай</div>
@@ -141,7 +141,7 @@
                             <li class="cart-item">
                               <div class="cart-item__left">
                                 <div class="cart-item__pic">
-                                  <img src="/src/img/roll1.png" alt="roll">
+                                  <img src="/src/img/roll1.webp" alt="roll">
                                 </div>
                                 <div class="cart-item__number">x 1</div>
                                 <div class="cart-item__name">Банзай</div>
@@ -158,7 +158,7 @@
                             <li class="cart-item">
                               <div class="cart-item__left">
                                 <div class="cart-item__pic">
-                                  <img src="/src/img/roll1.png" alt="roll">
+                                  <img src="/src/img/roll1.webp" alt="roll">
                                 </div>
                                 <div class="cart-item__number">x 1</div>
                                 <div class="cart-item__name">Банзай</div>
@@ -175,7 +175,7 @@
                             <li class="cart-item">
                               <div class="cart-item__left">
                                 <div class="cart-item__pic">
-                                  <img src="/src/img/roll1.png" alt="roll">
+                                  <img src="/src/img/roll1.webp" alt="roll">
                                 </div>
                                 <div class="cart-item__number">x 1</div>
                                 <div class="cart-item__name">Банзай</div>
@@ -192,7 +192,7 @@
                             <li class="cart-item">
                               <div class="cart-item__left">
                                 <div class="cart-item__pic">
-                                  <img src="/src/img/roll1.png" alt="roll">
+                                  <img src="/src/img/roll1.webp" alt="roll">
                                 </div>
                                 <div class="cart-item__number">x 1</div>
                                 <div class="cart-item__name">Банзай</div>
@@ -209,7 +209,7 @@
                             <li class="cart-item">
                               <div class="cart-item__left">
                                 <div class="cart-item__pic">
-                                  <img src="/src/img/roll1.png" alt="roll">
+                                  <img src="/src/img/roll1.webp" alt="roll">
                                 </div>
                                 <div class="cart-item__number">x 1</div>
                                 <div class="cart-item__name">Банзай</div>
@@ -265,13 +265,13 @@
             <div class="swiper banner-slider__swiper" data-swiper="banner">
               <div class="swiper-wrapper">
                 <div class="swiper-slide banner-slider__swiper-slide">
-                  <img src="/src/img/banner1.jpg" alt="tunets">
+                  <img src="/src/img/banner1.webp" alt="tunets">
                 </div>
                 <div class="swiper-slide banner-slider__swiper-slide">
-                  <img src="/src/img/banner2.jpg" alt="tunets">
+                  <img src="/src/img/banner2.webp" alt="tunets">
                 </div>
                 <div class="swiper-slide banner-slider__swiper-slide">
-                  <img src="/src/img/banner3.jpg" alt="tunets">
+                  <img src="/src/img/banner3.webp" alt="tunets">
                 </div>
               </div>
             </div>
@@ -294,58 +294,58 @@
           <div class="promo__container">
             <div class="promo__row">
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Комбо набор месяца "Итле"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo1.png" alt="promo">
+                    <img src="/src/img/promo1.webp" alt="promo">
                   </div>
                 </div>
               </article>
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Роллы месяца "С угрем"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo2.png" alt="promo">
+                    <img src="/src/img/promo2.webp" alt="promo">
                   </div>
                 </div>
               </article>
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Комбо набор месяца "Итле"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo3.png" alt="promo">
+                    <img src="/src/img/promo3.webp" alt="promo">
                   </div>
                 </div>
               </article>
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Роллы месяца "С угрем"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo4.png" alt="promo">
+                    <img src="/src/img/promo1.webp" alt="promo">
                   </div>
                 </div>
               </article>
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Комбо набор месяца "Итле"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo5.png" alt="promo">
+                    <img src="/src/img/promo2.webp" alt="promo">
                   </div>
                 </div>
               </article>
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Роллы месяца "С угрем"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo6.png" alt="promo">
+                    <img src="/src/img/promo3.webp" alt="promo">
                   </div>
                 </div>
               </article>
               <article class="promo-card">
-                <a href="#" class="promo-card__link"></a>
+                <a href="#" class="promo-card__link">Комбо набор месяца "Итле"</a>
                 <div class="promo-card__bg">
                   <div class="promo-card__content">
-                    <img src="/src/img/promo7.png" alt="promo">
+                    <img src="/src/img/promo1.webp" alt="promo">
                   </div>
                 </div>
               </article>
@@ -371,7 +371,7 @@
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll1.png" alt="roll">
+                  <img src="/src/img/roll1.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -386,18 +386,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll2.jpeg" alt="roll">
+                  <img src="/src/img/roll2.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -412,18 +412,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll3.jpeg" alt="roll">
+                  <img src="/src/img/roll3.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -438,18 +438,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll4.jpeg" alt="roll">
+                  <img src="/src/img/roll1.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -464,18 +464,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll5.jpeg" alt="roll">
+                  <img src="/src/img/roll2.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -490,18 +490,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll1.png" alt="roll">
+                  <img src="/src/img/roll3.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -516,18 +516,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll2.jpeg" alt="roll">
+                  <img src="/src/img/roll2.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -542,18 +542,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll3.jpeg" alt="roll">
+                  <img src="/src/img/roll1.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -568,18 +568,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll4.jpeg" alt="roll">
+                  <img src="/src/img/roll2.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -594,18 +594,18 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/roll5.jpeg" alt="roll">
+                  <img src="/src/img/roll3.webp" alt="roll">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -620,11 +620,11 @@
                   <span>/</span>
                   <span class="product-card__quant">240&nbsp;г</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
@@ -640,7 +640,7 @@
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                  <img src="/src/img/pizza1.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -653,18 +653,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza2.jpeg" alt="pizza">
+                  <img src="/src/img/pizza2.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -677,18 +677,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza3.jpeg" alt="pizza">
+                  <img src="/src/img/pizza3.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -701,18 +701,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                  <img src="/src/img/pizza1.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -725,18 +725,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza2.jpeg" alt="pizza">
+                  <img src="/src/img/pizza2.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -749,18 +749,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza3.jpeg" alt="pizza">
+                  <img src="/src/img/pizza3.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -773,18 +773,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                  <img src="/src/img/pizza1.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -797,18 +797,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza2.jpeg" alt="pizza">
+                  <img src="/src/img/pizza2.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -821,18 +821,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza3.jpeg" alt="pizza">
+                  <img src="/src/img/pizza3.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -845,18 +845,18 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
             <article class="product-card">
               <div class="product-card__top">
                 <a href="#">
-                  <img src="/src/img/pizza1.jpeg" alt="pizza">
+                  <img src="/src/img/pizza1.webp" alt="pizza">
                 </a>
               </div>
               <div class="product-card__desc">
@@ -869,11 +869,11 @@
                 <div class="product-card__right">
                   <span class="product-card__price">от 379&nbsp;₽</span>
                 </div>
-                <button class="button product-card__button">Выбрать</button>
+                <button class="button product-card__button" type="button">Выбрать</button>
                 <div class="count-button product-card__count-button">
-                  <button class="count-button__action" data-countbtn="minus">-</button>
+                  <button class="count-button__action" data-countbtn="minus" type="button">-</button>
                   <input type="text" readonly class="count-button__field" name="numberProds" value="1">
-                  <button class="count-button__action" data-countbtn="plus">+</button>
+                  <button class="count-button__action" data-countbtn="plus" type="button">+</button>
                 </div>
               </div>
             </article>
@@ -904,7 +904,7 @@
                 <span class="social-block__text">Доставка работает</span>
                 <span class="social-block__info">с 10:30 до 23:30</span>
               </div>
-              <a href="#" class="social-link"><img src="/src/img/icons/vk.svg" alt="vk"></a>
+              <a href="#" class="social-link social-link_vk">Ссылка на Вконтакте</a>
             </div>
             <div class="footer__info">
               <a href="/" class="logo footer__logo">
