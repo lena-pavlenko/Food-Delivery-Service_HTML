@@ -129,10 +129,18 @@
 
     &__button {
         width: 110px;
+
+        &.hide {
+            display: none;
+        }
     }
 
     &__count-button {
         display: none;
+
+        &.visible {
+            display: flex;
+        }
     }
 
     &:hover {
