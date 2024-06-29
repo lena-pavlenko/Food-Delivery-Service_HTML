@@ -9,6 +9,7 @@ window.onload = function() {
   const searchTrigger = document.querySelector('.search-block__btn')
   const citySelectParent = document.getElementById('citySelect')
   const productsContainer = document.querySelector('.products-grid')
+  const cartPopup = document.querySelector('.cart-popup')
 
   // Данные для отображения строки поиска
   const margin = 23;
@@ -172,6 +173,12 @@ window.onload = function() {
     citySelectHandler(e.target.closest('.city-select__visible'),e.target.closest('.city-select__item') )
   })
 
+  header.addEventListener('click', e => {
+    if (e.target.closest('.menu-trigger')) {
+      e.target.closest('.menu-trigger').parentElement.querySelector('.hide-menu__content').classList.add('open')
+    }
+  })
+
   // Добавление в корзину
   document.body.addEventListener('click', e => {
     
@@ -198,11 +205,8 @@ window.onload = function() {
       } else {
         e.target.closest('button[data-countbtn="minus"]').nextElementSibling.value = value
       }
-      
     }
   })
-
- 
 
   if (header) {
     const scrollHeader = header.querySelectorAll('.header__row')[1]
@@ -230,6 +234,10 @@ window.onload = function() {
       }
     })
   }
+
+  window.addEventListener('resize', () => {
+    menuWidth = document.querySelector('.menu-products').clientWidth - margin
+  })
 }
 
 
