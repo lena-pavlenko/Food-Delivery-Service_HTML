@@ -9,8 +9,8 @@
   </symbol>
 
   <symbol viewBox="0 0 16 20" id="location" xmlns="http://www.w3.org/2000/svg" fill="none">
-    <path d="M8.08299 0.75C4.39299 0.75 1.383 3.76 1.383 7.45C1.383 12.03 7.383 18.77 7.633 19.05C7.873 19.32 8.29299 19.32 8.53299 19.05C8.79299 18.77 14.783 12.03 14.783 7.45C14.783 3.76 11.773 0.75 8.08299 0.75Z" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.46794 9.78523C9.76062 9.57947 10.6417 8.36473 10.436 7.07204C10.2302 5.77936 9.01549 4.89824 7.72281 5.104C6.43013 5.30976 5.549 6.52449 5.75477 7.81717C5.96053 9.10985 7.17525 9.99099 8.46794 9.78523Z" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.08299 0.75C4.39299 0.75 1.383 3.76 1.383 7.45C1.383 12.03 7.383 18.77 7.633 19.05C7.873 19.32 8.29299 19.32 8.53299 19.05C8.79299 18.77 14.783 12.03 14.783 7.45C14.783 3.76 11.773 0.75 8.08299 0.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.46794 9.78523C9.76062 9.57947 10.6417 8.36473 10.436 7.07204C10.2302 5.77936 9.01549 4.89824 7.72281 5.104C6.43013 5.30976 5.549 6.52449 5.75477 7.81717C5.96053 9.10985 7.17525 9.99099 8.46794 9.78523Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
 
   <symbol viewBox="0 0 14 15" id="cross" xmlns="http://www.w3.org/2000/svg">
@@ -38,9 +38,8 @@
     <path d="M1 1.5L8 9L1 16.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
 
-  <symbol viewBox="0 0 13.5 11.5" fill="none" id="burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path id="Vector" d="M0.75 0.75L12.75 0.75" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
-    <path id="Vector" d="M6.75 5.75L12.75 5.75" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
-    <path id="Vector" d="M0.75 10.75L12.75 10.75" stroke="#000000" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+  <symbol viewBox="0 0 18 18" id="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M16.23 12.27L13.69 11.98C13.39 11.94 13.08 11.98 12.8 12.08C12.51 12.18 12.26 12.34 12.04 12.55L10.2 14.39C7.35 12.95 5.04 10.64 3.6 7.79L5.45 5.94C5.88 5.51 6.09 4.9 6.02 4.29L5.73 1.77C5.67 1.28 5.44 0.83 5.07 0.5C4.7 0.17 4.23 -0.01 3.74 0L2 0C0.87 0 -0.07 0.94 0 2.07C0.53 10.63 7.37 17.46 15.92 17.99C17.05 18.06 17.99 17.12 17.99 15.99L17.99 14.25C18 13.24 17.24 12.39 16.23 12.27Z" fill-opacity="1" fill-rule="nonzero"/>
   </symbol>
+
 </svg>

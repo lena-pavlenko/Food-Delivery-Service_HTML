@@ -17,6 +17,7 @@
             <a href="/" class="logo header__logo header__logo_mob">
               <img src="./img/logo.svg" alt="Джонни Тунец">
             </a>
+            <button class="menu-trigger transformer-menu__menu-trigger" aria-label="Кнопка управления мобильным меню"></button>
             <div class="transformer-menu">
               <div class="header__leftside">
                 <a href="/" class="logo header__logo">
@@ -30,6 +31,7 @@
                     <button type="button" class="city-select__field">
                       <input type="hidden" value="0" name="city">
                       <span class="city-select__text">Краснодар</span>
+                      <span class="city-select__sup-text">Изменить</span>
                     </button>
                     <div class="city-select__arrow">
                       <svg class="shevron-icon">
@@ -40,6 +42,9 @@
                   <div class="city-select__drop"></div>
                 </div>
                 <ul class="nav-menu header__nav-menu">
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Войти (Профиль)</a>
+                  </li>
                   <li class="nav-menu__item">
                     <a href="#" class="nav-menu__link">Акции</a>
                   </li>
@@ -56,16 +61,20 @@
               </div>
               <div class="header__rightside">
                 <div class="phone-block">
-                  <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
-                  <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
+                  <svg class="phone-icon">
+                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                  </svg>
+                  <div class="phone-block__info">
+                    <a href="tel:89990009999" class="phone-block__number">8 (999) 000-99-99</a>
+                    <span class="phone-block__text">Прием заказов с 9:00 до 23:00</span>
+                  </div>
+                </div>
+                <div class="header__apps">
+                  <a href="#" class="app-item"><img src="/src/img/googleplay.png" alt="googleplay"></a>
+                  <a href="#" class="app-item"><img src="/src/img/appstore.png" alt="appstore"></a>
                 </div>
               </div>
             </div>
-            <button class="menu-trigger transformer-menu__menu-trigger" aria-label="Кнопка управления мобильным меню">
-              <svg class="burger-icon">
-                <use xlink:href="img/icons/sprite.svg#burger"></use>
-              </svg>
-            </button>
           </div>
           <div class="header__row">
             <div class="logo-small header__logo-small"><img src="/src/img/logo-little.svg" loading="lazy" alt="Джонни Тунец"></div>
@@ -101,11 +110,7 @@
             </div>
             <div class="header__rightside">
               <div class="hide-menu">
-                <button class="menu-trigger hide-menu__menu-trigger" type="button" aria-label="Кнопка управления мобильным меню">
-                  <svg class="burger-icon">
-                    <use xlink:href="img/icons/sprite.svg#burger"></use>
-                  </svg>
-                </button>
+                <button class="menu-trigger hide-menu__menu-trigger" type="button" aria-label="Кнопка управления скрытым меню"></button>
                 <div class="hide-menu__content">
                   <div class="cart-block personal-block">
                     <div class="personal-block__visual">
