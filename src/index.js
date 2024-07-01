@@ -8,8 +8,7 @@ window.onload = function() {
   const header = document.querySelector('.header')
   const searchTrigger = document.querySelector('.search-block__btn')
   const citySelectParent = document.getElementById('citySelect')
-  const productsContainer = document.querySelector('.products-grid')
-  const cartPopup = document.querySelector('.cart-popup')
+  const buttonUp = document.querySelector('.up')
 
   // Данные для отображения строки поиска
   const margin = 23;
@@ -175,8 +174,21 @@ window.onload = function() {
 
   header.addEventListener('click', e => {
     if (e.target.closest('.menu-trigger')) {
-      e.target.closest('.menu-trigger').parentElement.querySelector('.hide-menu__content').classList.add('open')
+      e.target.closest('.menu-trigger').classList.toggle('animate')
+      e.target.closest('.menu-trigger').nextElementSibling.classList.toggle('open')
+      
+      if (screen.width <= 1100) {
+        document.body.classList.toggle('no-scroll')
+      }
     }
+  })
+
+  buttonUp.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   })
 
   // Добавление в корзину
@@ -231,6 +243,13 @@ window.onload = function() {
         header.classList.add('isScroll')
       } else {
         header.classList.remove('isScroll')
+      }
+
+      // Кнопка наверх
+      if (window.scrollY > 300) {
+        buttonUp.classList.add('visible')
+      } else {
+        buttonUp.classList.remove('visible')
       }
     })
   }
