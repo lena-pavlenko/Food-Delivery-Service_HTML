@@ -770,6 +770,10 @@ path {
     padding: 2px 9px;
     top: -1px;
     right: -20px;
+
+    &:empty {
+      display: none;
+    }
   }
 }
 
@@ -1048,19 +1052,12 @@ path {
   cursor: pointer;
   transition: all ease .3s;
 
-  @media(max-width: $mobileBreakPoint) {
-    width: 52px;
-    height: 52px;
-    right: auto;
-    left: 50%;
+  @media(max-width: $tabletBreakPoint) {
+    display: none;
   }
 
   &.visible {
     translate: 0 0;
-
-    @media(max-width: $mobileBreakPoint) {
-      translate: -50% -100%;
-    }
   }
 
   &:hover {
