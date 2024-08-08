@@ -2,7 +2,7 @@
   padding: 35px 0;
 
   @media(max-width: $mobileBreakPoint) {
-    padding: 12px 0;
+    padding: 24px 0 12px;
   }
 
   .product-filter {
@@ -27,6 +27,10 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @media(max-width: $tabletBreakPoint) {
+    display: none;
+  }
+
   &__button {
     border: none;
     background-color: transparent;
@@ -40,10 +44,6 @@
     text-align: center;
     cursor: pointer;
     transition: ease .3s;
-
-    @media(max-width: $tabletBreakPoint) {
-      padding: 12px;
-    }
 
     &:hover {
       color: $textDark;
