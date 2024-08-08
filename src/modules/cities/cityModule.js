@@ -78,9 +78,12 @@ const cityModule = () => {
   }
 
   // Выпадашка с городом
-  citySelectParent.addEventListener('click', e => {
-    citySelectHandler(e.target.closest('.city-select__visible'),e.target.closest('.city-select__item'), cityArray)
-  })
+  if (citySelectParent) {
+    citySelectParent.addEventListener('click', e => {
+      citySelectHandler(e.target.closest('.city-select__visible'),e.target.closest('.city-select__item'), cityArray)
+    })
+  }
+  
 }
 
 export default cityModule

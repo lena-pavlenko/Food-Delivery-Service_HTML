@@ -15,13 +15,9 @@ const search = () => {
   let menuWidth = 0
   let searchWidth = 0
 
-  if (menu) {
-    menuWidth = menu.clientWidth - margin
-  }
+  if (menu) menuWidth = menu.clientWidth - margin
 
-  if (mobileSearch) {
-    searchWidth = document.body.scrollWidth - mobileSearch.getBoundingClientRect().right - mobMargin
-  }
+  if (mobileSearch) searchWidth = document.body.scrollWidth - mobileSearch.getBoundingClientRect().right - mobMargin
 
   // Открытие/закрытие поиска
   const searchHandlerDesktop = (target) => {
@@ -75,14 +71,22 @@ const search = () => {
   })
 
   if (header) {
-    const scrollHeader = header.querySelectorAll('.header__row')[1]
+
+    let scrollHeader = null
+    if (header.querySelectorAll('.header__row').length) {
+      scrollHeader = header.querySelectorAll('.header__row')[1]
+    }
 
     // События при скролле
     window.addEventListener('scroll', e => {
-      menuWidth = document.querySelector('.menu-products').clientWidth - margin
+      let topHeaderHeight = 0
+      if (menu) menuWidth = menu.clientWidth - margin
 
       const headerPaddingTop = parseInt(window.getComputedStyle(header).paddingTop)
-      const topHeaderHeight = header.querySelectorAll('.header__row')[0].clientHeight
+
+      if (header.querySelectorAll('.header__row').length) {
+        topHeaderHeight = header.querySelectorAll('.header__row')[0].clientHeight
+      }
 
       // Фикс шапки
       if (screen.width > 1100 && window.scrollY > topHeaderHeight + headerPaddingTop) {
@@ -109,9 +113,7 @@ const search = () => {
     if (mobileSearch) {
       searchWidth = document.body.scrollWidth - mobileSearch.getBoundingClientRect().right - mobMargin
     }
-    
   })
-  
 }
 
 export default search
