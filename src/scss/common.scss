@@ -899,6 +899,51 @@ path {
   }
 }
 
+.float-cart {
+  position: fixed;
+  right: 16px;
+  bottom: 26px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 22px 0px rgba(116, 92, 0, 0.07);
+  background: $redAccent;
+  text-decoration: none;
+
+  &.visible {
+    @media(max-width: $tabletBreakPoint) {
+      display: flex;
+    }
+  }
+
+  &__summ {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 10px;
+    border-radius: 22px;
+    background: #fff;
+    color: $redAccent;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .cart-icon {
+    width: 23px;
+    height: 26px;
+    stroke: #fff;
+  }
+}
+
 .menu-trigger {
   position: relative;
   background-color: #000;

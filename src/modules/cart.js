@@ -1,4 +1,5 @@
 const cart = () => {
+  const floatBtn = document.querySelector('.float-cart')
 
   const hideButton = (target) => {
     target.classList.add('hide')
@@ -45,6 +46,16 @@ const cart = () => {
       minusButton(e.target)
     }
   })
+
+  if (floatBtn) {
+    window.addEventListener('scroll', e => {
+      if (window.scrollY > 300) {
+        floatBtn.classList.add('visible')
+      } else {
+        floatBtn.classList.remove('visible')
+      }
+    })
+  }
 }
 
 export default cart
