@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- favicons start-->
+  <link rel="icon" sizes="180x180" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- favicons end-->
+  <title>Главная | Тунец</title>
 </head>
 
 <body>
@@ -15,13 +25,13 @@
         <div class="header__content">
           <div class="header__row">
             <a href="/" class="logo header__logo header__logo_mob">
-              <img src="./img/logo.svg" alt="Джонни Тунец">
+              <img src="./img/logo.svg" alt="Логотип Джонни Тунец">
             </a>
             <button class="menu-trigger transformer-menu__menu-trigger" aria-label="Кнопка управления мобильным меню"></button>
             <div class="transformer-menu">
               <div class="header__leftside">
                 <a href="/" class="logo header__logo">
-                  <img src="./img/logo.svg" alt="Джонни Тунец" width="442" height="36">
+                  <img src="./img/logo.svg" alt="Логотип Джонни Тунец" width="442" height="36">
                 </a>
                 <div class="city-select" id="citySelect">
                   <div class="city-select__visible">
@@ -257,7 +267,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -265,6 +274,7 @@
     </header>
     <main class="main">
       <section class="banner">
+        <h1 class="sr-only">"Джонни Тунец" - доставка роллов и пиццы</h1>
         <div class="container">
           <div class="banner-slider">
             <div class="swiper banner-slider__swiper" data-swiper="banner">
@@ -295,6 +305,7 @@
         </div>
       </section>
       <section class="promo" id="combo">
+        <h2 class="sr-only">Промо-акции</h2>
         <div class="container">
           <div class="promo__container">
             <div class="promo__row">
@@ -359,6 +370,36 @@
 
         </div>
       </section>
+      <div class="mobile-block">
+        <div class="search-block mobile-block__search-block">
+          <div class="search-block__control">
+            <input type="text" class="search-block__input" name="q" placeholder="Поиск...">
+            <button class="search-block__reset" aria-label="Отменить ввод">
+              <svg class="reset-icon">
+                <use xlink:href="img/icons/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <button class="search-block__button button" type="button">Найти</button>
+          </div>
+          <button class="search-block__btn" type="button" aria-label="Кнопка управления полем поиска">
+            <svg class="search-icon">
+              <use xlink:href="img/icons/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+        <nav class="menu-products">
+          <a href="#" class="menu-products__link">Комбо наборы</a>
+          <a href="#" class="menu-products__link">Пицца</a>
+          <a href="#" class="menu-products__link">Роллы</a>
+          <a href="#" class="menu-products__link">Суши</a>
+          <a href="#" class="menu-products__link">Сеты</a>
+          <a href="#" class="menu-products__link">Вок и закуски</a>
+          <a href="#" class="menu-products__link">Салаты</a>
+          <a href="#" class="menu-products__link">Десерты</a>
+          <a href="#" class="menu-products__link">Напитки</a>
+          <a href="#" class="menu-products__link">Дополнительно</a>
+        </nav>
+      </div>
       <section class="products" id="rolls">
         <div class="container">
           <h2 class="title title_h2 products__title_h2">
@@ -933,7 +974,7 @@
       </div>
     </footer>
   </div>
-  <button class="up">
+  <button class="up" aria-label="Кнопка наверх">
     <svg class="arrow-icon">
       <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
     </svg>

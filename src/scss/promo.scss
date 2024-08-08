@@ -1,9 +1,9 @@
 .promo {
-    padding: 25px 0 35px;
+  padding: 25px 0 35px;
 
-    @media(max-width: $mobileBreakPoint) {
-      padding: 24px 0 12px;
-    }
+  @media(max-width: $mobileBreakPoint) {
+    padding: 24px 0;
+  }
 
   &__container {
     overflow: auto;
@@ -78,6 +78,8 @@
 
     &__link {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       font-size: 0;

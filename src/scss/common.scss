@@ -40,6 +40,16 @@ body {
   margin: 0 auto;
 }
 
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .location-icon{
   width: 16px;
   height: 20px;
@@ -162,6 +172,7 @@ path {
 .count-button {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 110px;
   height: 40px;
   box-sizing: border-box;
@@ -182,6 +193,8 @@ path {
   }
 
   &__action {
+    display: flex;
+    flex: 1;
     background-color: transparent;
     padding: 0;
     border: none;
@@ -189,6 +202,10 @@ path {
     font-weight: 400;
     cursor: pointer;
     transition: ease .3s;
+
+    &[data-countbtn="plus"] {
+      justify-content: flex-end;
+    }
 
     @media(max-width: $mobileBreakPoint) {
       font-size: 17px;
@@ -206,7 +223,7 @@ path {
     font-size: 14px;
     outline: none;
     width: 100%;
-    max-width: 55px;
+    max-width: 25px;
     margin: 0;
     border: none;
     height: 19px;
@@ -241,10 +258,10 @@ path {
     line-height: 0.66;
     text-decoration: none;
     transition: all ease .3s;
+  }
 
-    &:hover {
-      color: $accentColor;
-    }
+  a:hover {
+    color: $accentColor;
   }
 }
 
@@ -556,6 +573,11 @@ path {
       visibility: visible;
       z-index: 1;
     }
+
+    @media(max-width: $tabletBreakPoint) {
+      right: auto;
+      left: 32px;
+    }
   }
 
   &__button {
@@ -621,6 +643,16 @@ path {
     gap: 16px;
   }
 
+  @media(max-width: $tabletBreakPoint) {
+    gap: 0;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
   &__link{
     color: inherit;
     text-decoration: none;
@@ -634,9 +666,27 @@ path {
       font-size: 16px;
     }
 
+    @media(max-width: $tabletBreakPoint) {
+      color: $textLight;
+      border-radius: 100px;
+      background-color: transparent;
+      padding: 6px 14px;
+      white-space: nowrap;
+    }
+
+    @media(max-width: $mobileBreakPoint) {
+      font-size: 14px;
+    }
+
     &:hover {
       text-decoration: underline;
       color: $redAccent;
+
+      @media(max-width: $tabletBreakPoint) {
+        text-decoration: none;
+        color: $textDark;
+        background-color: #F5F5F5;
+      }
     }
   }
 }
@@ -1009,11 +1059,22 @@ path {
     translate: 0 0;
 
     @media(max-width: $mobileBreakPoint) {
-      translate: -50% 0;
+      translate: -50% -100%;
     }
   }
 
   &:hover {
     background: $accentColorHover;
+  }
+}
+
+.mobile-block {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding-left: 16px;
+
+  @media(max-width: $tabletBreakPoint) {
+    display: flex;
   }
 }
