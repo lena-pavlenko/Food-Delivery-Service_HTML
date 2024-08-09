@@ -19,6 +19,12 @@
       }
     }
 
+    .menu-products__link {
+      @media (max-width: 1200px) {
+        font-size: 14px;
+      }
+    }
+
     .logo-small {
       display: block;
     }
@@ -33,9 +39,6 @@
     }
 
     .header__rightside {
-      @media(max-width: 1450px) {
-        flex-grow: 1;
-      }
 
       @media(max-width: 1365px) {
         display: none;
@@ -180,6 +183,10 @@
 
   &__menu-products{
     padding-right: 26px;
+
+    @media (max-width: 1560px) {
+      justify-content: space-between;
+    }
   }
 
   &__apps {

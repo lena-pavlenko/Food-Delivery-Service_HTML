@@ -1,3 +1,4 @@
+import './index.html';
 import './scss/index.scss';
 import app from './modules/app';
 
