@@ -622,6 +622,10 @@ path {
     }
   }
 
+  .reset-icon {
+    stroke: $textLight;
+  }
+
   &__btn {
     padding: 0;
     border: none;
