@@ -405,15 +405,15 @@
             <a href="#">Роллы</a>
           </h2>
           <div class="product-filter">
-            <button class="product-filter__button product-filter__button_current">Все</button>
-            <button class="product-filter__button">Филадельфия</button>
-            <button class="product-filter__button">Холодные</button>
-            <button class="product-filter__button">Запечённые</button>
-            <button class="product-filter__button">Горячие</button>
-            <button class="product-filter__button">Острые</button>
+            <button class="product-filter__button product-filter__button_current" data-filter="all">Все</button>
+            <button class="product-filter__button" data-filter="phili">Филадельфия</button>
+            <button class="product-filter__button" data-filter="cold">Холодные</button>
+            <button class="product-filter__button" data-filter="backed">Запечённые</button>
+            <button class="product-filter__button" data-filter="hot">Горячие</button>
+            <button class="product-filter__button" data-filter="spicy">Острые</button>
           </div>
           <div class="products-grid">
-            <article class="product-card">
+            <article class="product-card" data-type="phili">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll1.webp" alt="roll">
@@ -439,7 +439,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="phili">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll2.webp" alt="roll">
@@ -465,7 +465,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="cold">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll3.webp" alt="roll">
@@ -491,7 +491,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="backed">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll1.webp" alt="roll">
@@ -517,7 +517,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="hot">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll2.webp" alt="roll">
@@ -543,7 +543,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="spicy">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll3.webp" alt="roll">
@@ -569,7 +569,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="spicy">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll2.webp" alt="roll">
@@ -595,7 +595,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="cold">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll1.webp" alt="roll">
@@ -621,7 +621,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="backed">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll2.webp" alt="roll">
@@ -647,7 +647,7 @@
                 </div>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-type="hot">
               <div class="product-card__top">
                 <a href="#">
                   <img src="/src/img/roll3.webp" alt="roll">

@@ -58,7 +58,7 @@
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
   gap: 28px 12px;
 
   @media(max-width: $mobileBreakPoint) {
@@ -76,6 +76,10 @@
     position: relative;
     padding: 6px 6px 51px 6px;
     box-shadow: 0px 4px 22px 0px rgba(116, 92, 0, 0.07);
+  }
+
+  &.hidden {
+    display: none;
   }
 
   &__top {

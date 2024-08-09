@@ -4,6 +4,7 @@ import buttonUp from './buttonUp.js'
 import menuTrigger from './menuTrigger';
 import slider from './slider.js';
 import cart from './cart.js';
+import filterProds from './filterProds.js';
 
 export default {
   init() {
@@ -13,5 +14,6 @@ export default {
     menuTrigger()
     slider()
     cart()
+    filterProds()
   }
 }
